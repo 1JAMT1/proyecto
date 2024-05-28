@@ -36,7 +36,7 @@
                     //SELECT * FROM libros ORDER BY titulo ASC
                     $consql=("SELECT p.*,v.idautor,v.nombre,v.paterno FROM libros
                     p INNER JOIN autor v ON 
-                    p.idautor=v.idautor where p.precio > 5");
+                    p.idautor=v.idautor where p.precio > 6");
                     $resultado=mysqli_query($db,$consql);
                     while($var=mysqli_fetch_array($resultado))
                     {
