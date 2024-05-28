@@ -40,13 +40,13 @@
 				<nav class="navbar container">
 					<i class="fa-solid fa-bars"></i>
 					<ul class="menu">
-						<li><a href="../espaciodeliteratura/index.php">Inicio</a></li>
-						<li><a href="../espaciodeliteratura/CATALOGO.php">Catalogo</a></li>
-						<li><a href="../espaciodeliteratura/ESPACIO.php">Espacio</a></li>
-						<li><a href="../espaciodeliteratura/QUIENES SOMOS.php">Quienes Somos</a></li>
-						<li><a href="../espaciodeliteratura/BLOG.php">Blog</a></li>
-						<li><a href="../espaciodeliteratura/CONTACTANOS.php">Contactanos</a></li>
-						<li><a href="../espaciodeliteratura/BASEDEDATOS.php">Base de Datos</a></li>
+						<li><a href="/espaciodeliteratura/index.php">Inicio</a></li>
+						<li><a href="/espaciodeliteratura/CATALOGO.php">Catalogo</a></li>
+						<li><a href="/espaciodeliteratura/ESPACIO.php">Espacio</a></li>
+						<li><a href="/espaciodeliteratura/QUIENES SOMOS.php">Quienes Somos</a></li>
+						<li><a href="/espaciodeliteratura/BLOG.php">Blog</a></li>
+						<li><a href="/espaciodeliteratura/CONTACTANOS.php">Contactanos</a></li>
+						<li><a href="/espaciodeliteratura/BASEDEDATOS.php">Base de Datos</a></li>
 					</ul>
 
 					<form class="search-form">
