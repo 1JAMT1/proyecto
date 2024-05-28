@@ -86,7 +86,7 @@
 						Desarrollado por G1
 					</p>
 
-					<img src="img/payment.png" href="#" onclick="openPopup1()" alt="Pagos">
+					<img src="img/payment.png" href="#" onclick="openPopup9()" alt="Pagos">
 				</div>
 			</div>
 	    		<script src="/espaciodeliteratura/js/gotop.js"></script>
@@ -121,6 +121,13 @@
 			<script>
         		function openPopup6() {
         		var url = 'reembolsos.php'
+        		var opciones = 'width=400,height=400,scrollbars=yes,resizable=yes';
+        		window.open(url, '_blank', opciones);
+        		}
+			</script>
+	    		<script>
+        		function openPopup9() {
+        		var url = 'pagos.php'
         		var opciones = 'width=400,height=400,scrollbars=yes,resizable=yes';
         		window.open(url, '_blank', opciones);
         		}
