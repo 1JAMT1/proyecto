@@ -9,6 +9,20 @@
 				<a href="#">Ver más</a>
 			</div>
 		</section>
+
+	<link rel="stylesheet" href="../../css/dropdown.css">
+	<div class="dropdown">
+			<button>--Seleccione--</button>
+			<div class="dropdown-content"> 
+  				<a href="../espaciodeliteratura/CATALOGO.php">Mas destacados</a>
+  				<a href="../espaciodeliteratura/CATascendente.php">Ascendente</a>
+  				<a href="../espaciodeliteratura/CATdescendente.php">Descendente</a>
+  				<a href="../espaciodeliteratura/CATbarato.php">Mas baratos</a>
+  				<a href="../espaciodeliteratura/CATcaro.php">Mas caros</a>
+  				<a href="../espaciodeliteratura/CATdisponible.php">Disponibles</a>
+			</div>
+		</div>
+
         <main class="main-content">
             <section class="container specials">
                 <br>
