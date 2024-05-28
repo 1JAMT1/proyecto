@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carrito</title>
 <link rel="stylesheet" href="css/bootstrap-min.css">
+<link rel="stylesheet" href="cssc/font-awesome.min.css" />
+<link rel="stylesheet" href="cssc/contact.css" />
 <link rel="stylesheet" href="css/bootstrap-formhelpers-min.css" media="screen">
 <link rel="stylesheet" href="css/bootstrapValidator-min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700,900,900i">
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
 <link rel="stylesheet" href="css/bootstrap-side-notes.css" />
 <style type="text/css">
@@ -233,7 +236,7 @@ $(document).ready(function() {
   <div class="row row-centered">
   <div class="col-md-4 col-md-offset-4">
   <div class="page-header">
-    <h2 class="gdfg">Carrito</h2>
+    <h2 class="gdfg">CARRITO</h2>
   </div>
   <noscript>
   <div class="bs-callout bs-callout-danger">
@@ -406,6 +409,9 @@ if ($_POST) {
       </div>
     </div>
   </fieldset>
+  <script src="jsc/jquery-1.12.4.min.js"></script>
+  <script src="jsc/bootstrap.min.js"></script>
+  <script src="jsc/custom.js"></script>
 </form>
 </body>
 </html>
