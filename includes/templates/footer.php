@@ -88,7 +88,7 @@
 						Desarrollado por G1
 					</p>
 
-					<img src="img/payment.png" href="#" onclick="openPopup9()" alt="Pagos">
+					<img src="/espaciodeliteratura/img/payment.png" href="#" onclick="openPopup9()" alt="Pagos">
 				</div>
 			</div>
 	    		<script src="/espaciodeliteratura/js/gotop.js"></script>
