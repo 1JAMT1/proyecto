@@ -52,15 +52,72 @@ incluirTemplate('header');
             <?php echo $error; ?>
         </div>
     <?php endforeach; ?>
-    <form action="" method="post" class="formulario">
-        <fieldset>
-            <label for="ema">E-mail</label>
-            <input type="email" name="ema" id="ema" value="" placeholder="Tu email">
-            <label for="pas">Password</label>
-            <input type="password" name="pas" id="pas" value="" placeholder="Tu password">
-        </fieldset>
-        <input type="submit" value="Iniciar Sesión" class="boton boton-verde">
-    </form>
+    <style>
+    /* Estilos con variables jamt */
+    :root {
+        --jamt-color-fondo: #f4f4f9;
+        --jamt-color-texto: #333;
+        --jamt-color-borde: #4CAF50;
+        --jamt-color-boton-fondo: #4CAF50;
+        --jamt-color-boton-texto: #fff;
+    }
+
+    .formulario {
+        font-family: Arial, sans-serif;
+        background-color: var(--jamt-color-fondo);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--jamt-color-texto);
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: var(--jamt-color-boton-fondo);
+        color: var(--jamt-color-boton-texto);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<form action="" method="post" class="formulario">
+    <fieldset>
+        <label for="ema">E-mail</label>
+        <input type="email" name="ema" id="ema" value="" placeholder="Tu email">
+        <label for="pas">Password</label>
+        <input type="password" name="pas" id="pas" value="" placeholder="Tu password">
+    </fieldset>
+    <input type="submit" value="Iniciar Sesión" class="boton boton-verde">
+</form>
+
 </main>
 
 <?php
