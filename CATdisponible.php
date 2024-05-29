@@ -45,7 +45,7 @@
                 <tr>
                         <td><?php echo $var['titulo']; ?> </td>
                         <td><?php echo $var['nombre']." ".$var['paterno'] ; ?> </td>
-                        <td><?php echo $var['genero']; ?> </td>
+                        <td><?php echo $var['generoLibro']; ?> </td>
                         <!-- inicio de imagen  -->
                         <td>
                             <img src="img/<?php echo $var['portada']; ?>" >
