@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/espaciodeliteratura/css/gotop.css">
+    <link rel="stylesheet" href="/espaciodeliteratura/styles.css">
+    <link rel="stylesheet" href="/espaciodeliteratura/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <div class="go-top-container">
@@ -61,7 +64,6 @@
 						<ul>
 							<li><a href="/espaciodeliteratura/admin/usuario/index.php">Mi cuenta</a></li>
 							<li><a href="/espaciodeliteratura/admin/pedido/listado.php">Historial de ordenes</a></li>
-							<li><a href="#">Lista de deseos</a></li>
 							<li><a href="#" onclick="openPopup5()">Boletín</a></li>
 							<li><a href="#" onclick="openPopup6()">Reembolsos</a></li>
 						</ul>
@@ -132,6 +134,10 @@
         		window.open(url, '_blank', opciones);
         		}
 			</script>
+	    		<script
+			src="https://kit.fontawesome.com/81581fb069.js"
+			></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	</footer>
 </body>
 </html>
