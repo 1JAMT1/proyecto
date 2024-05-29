@@ -287,7 +287,7 @@ if ($_POST) {
   <fieldset>
   
   
-  <legend>Detalles</legend>
+  <legend>Detalles</legend> 
   
   <div class="form-group">
     <label class="col-sm-4 control-label" for="textinput">Pais</label>
