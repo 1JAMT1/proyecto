@@ -8,10 +8,10 @@
         $p=$_POST['pas'];
         $a=$_FILES['ima']['name'];
         $b=$_POST['num'];
-        $rol=$_POST['rol'];
+
         $pashash=password_hash($p,PASSWORD_DEFAULT);
         $con_sql="INSERT INTO usuarios (nickname,gmail,password,imagenUsuario,telefono,rolUsuario) 
-        VALUES ('$nick','$g','$pashash','$a','$b','$rol')";
+        VALUES ('$nick','$g','$pashash','$a','$b','usuario')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             $tmp=$_FILES['ima']['tmp_name'];

@@ -25,8 +25,6 @@
                 <input type="number" name="num" id="num">
                 <label for="">Contraseña:</label>
                 <input type="varchar" name="pas" id="pas" placeholder="Password">
-                <label for="">Rol</label>
-                <input type="text" name="rol" id="rol">
             </fieldset>
             <br>
             <input type="submit" value="Regristar Usuario" class="btn btn-success">

@@ -23,16 +23,7 @@
 		</div>
 
         <h3>
-        <table class="table table-striped">
-            <thead>
-                <th> Título </th>
-                <th> Autor</th>
-                <th> Género </th>
-                <th> Portada </th>
-                <th> Precio </th>
-                <th> Descripción </th>
-            </thead>
-            <tbody>
+        <div class="container-products">
                 <?php
                     //SELECT * FROM libros ORDER BY titulo ASC
                     $consql=("SELECT p.*,v.idautor,v.nombre,v.paterno FROM libros
@@ -42,25 +33,41 @@
                     while($var=mysqli_fetch_array($resultado))
                     {
                 ?>
-                <tr>
-                        <td><?php echo $var['titulo']; ?> </td>
-                        <td><?php echo $var['nombre']." ".$var['paterno'] ; ?> </td>
-                        <td><?php echo $var['generoLibro']; ?> </td>
-                        <!-- inicio de imagen  -->
-                        <td>
-                            <img src="img/<?php echo $var['portada']; ?>" >
-                        </td>
-                        <!-- fin de imagen -->
-                        <td><?php echo $var['precio']; ?> </td>
-                        <td><?php echo $var['descripcion']; ?> </td>
 
-
-                </tr>
+<div class="card-product">
+						<div class="container-img">
+							<img src="img/<?php echo $var['portada']; ?>" alt="Cafe Irish" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3><?php echo $var['titulo']; ?></h3>
+							<span class="add-cart">
+							<a href="#" onclick="openPopup()"><i class="fa-solid fa-basket-shopping"></i> </a>
+							</span>
+							<p class="price"><?php echo $var['precio']; ?></p>
+						</div>
+					</div>
                 <?php
                     }
                 ?>
-            </tbody>
-        </table>
+</div>
 
         </h3>
         <a href="/espaciodeliteratura/BASEDEDATOS.php" class="btn btn-warning">Volver</a>

@@ -62,7 +62,7 @@
 						<p class="title-footer">Mi cuenta</p>
 
 						<ul>
-							<li><a href="/espaciodeliteratura/admin/usuario/index.php">Mi cuenta</a></li>
+							<li><a href="/espaciodeliteratura/admin/usuarios/listado.php">Mi cuenta</a></li>
 							<li><a href="/espaciodeliteratura/admin/pedido/listado.php">Historial de ordenes</a></li>
 							<li><a href="#" onclick="openPopup5()">Boletín</a></li>
 							<li><a href="#" onclick="openPopup6()">Reembolsos</a></li>
