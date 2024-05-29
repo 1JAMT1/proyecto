@@ -2,11 +2,18 @@
     require '../../includes/config/database.php';
     $db=conectarDB();
     //var_dump($db);
-    if($_POST){
+    $cod=$_GET['cod'];
+    if(isset($_POST['Modificar']))
+    {
         $i=$_POST['idu'];
         $g=$_POST['gma'];
         $p=$_POST['pas'];
-        $con_sql="INSERT INTO vendedores (idusuario,gmail,password) VALUES ('$i','$g','$p')";
+        $telefono=$_POST['tel'];
+        $nickname=$_POST['nick'];
+        $con_sql="UPDATE usuarios 
+        SET idusuario='$i',gmail='$g',password='$p'
+        ,telefono='$telefono',nickname='$nickname'
+        WHERE idusuario='$cod')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             echo "

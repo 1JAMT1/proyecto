@@ -8,7 +8,10 @@
     {
         $var=$_POST['gma'];
         $varchar=$_POST['pas'];
-        $con_sql="UPDATE usuarios SET gmail='$var', password='$varchar' WHERE idusuario='$cod'";
+        $tel=$_POST['tel'];
+        $nick=$_POST['nick'];
+        $con_sql="UPDATE usuarios SET gmail='$var', password='$varchar', 
+        telefono='$tel', nickname='$nick' WHERE idusuario='$cod'";
         $resm=mysqli_query($db,$con_sql);
         if($resm){
             echo "
@@ -42,6 +45,14 @@
             <tr>
                 <td>Password</td>
                 <td><input type="varchar" class="form-control" name="pas" id="pas" value="<?php echo $fila['password']; ?> "></td>
+            </tr>
+            <tr>
+                <td>Telefono</td>
+                <td><input type="number" class="form-control" name="tel" id="tel" value="<?php echo $fila['telefono']; ?>"></td>
+            </tr>
+            <tr>
+                <td>Nickname</td>
+                <td><input type="text" class="form-control" name="nick" id="nick" value="<?php echo $fila['nickname']; ?>"></td>
             </tr>
             <tr>
             <td colspan="3">
