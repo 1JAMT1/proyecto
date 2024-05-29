@@ -1,5 +1,4 @@
 <?php
-    // Conexión a la base de datos
     require '../../includes/config/database.php';
     $jamt_db = conectarDB();
     require '../../includes/funciones.php';
@@ -25,7 +24,7 @@ if ($jamt_res) {
         padding: 0;
     }
     .jamt-container {
-        max-width: 1200px; /* Ajustado para acomodar mejor tres columnas */
+        max-width: 1200px; 
         margin: 0 auto;
         padding: 20px;
         background-color: #fff;
@@ -46,7 +45,7 @@ if ($jamt_res) {
     }
     .jamt-libros-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+        grid-template-columns: repeat(3, 1fr); 
         gap: 20px;
     }
     .jamt-libro {
