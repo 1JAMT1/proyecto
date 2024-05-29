@@ -80,7 +80,7 @@
     ?>
     <div class="jamt-profile">
         <img src="../usuarios/imagenes/<?php echo htmlspecialchars($jamt_usuario['imagenUsuario']); ?>" alt="Imagen de perfil">
-        <h2>Bienvenido a tu perfil, <?php echo htmlspecialchars($jamt_usuario['nickname']); ?></h2>
+        <h2>Bienvenido  <?php echo htmlspecialchars($jamt_usuario['nickname']); ?></h2>
     </div>
 
     <h2 class="jamt-header">Tus pedidos son:</h2>

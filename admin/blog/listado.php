@@ -34,7 +34,7 @@
                         <td><?php echo $var['contenido']; ?> </td>
                         <!-- inicio de imagen  -->
                         <td>
-                            <img src="imagenes/<?php echo $var['imagen']; ?>" >
+                            <img src="imagenes/<?php echo $var['imagen']; ?>" style="max-width: 100px; max-height: 100px;" >
                         </td>
                         <!-- fin de imagen -->
                         <!-- inicio usuario -->

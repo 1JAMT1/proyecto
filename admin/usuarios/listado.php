@@ -33,8 +33,10 @@
                         <td><?php echo $var['gmail']; ?> </td>
                         <!-- inicio de imagen  -->
                         <td>
-                            <img src="imagenes/<?php echo $var['imagenUsuario']; ?>" >
+                             <img src="imagenes/<?php echo $var['imagenUsuario']; ?>" 
+                             style="max-width: 100px; max-height: 100px;">
                         </td>
+
                         <!-- fin de imagen -->
                         <td><?php echo $var['telefono']; ?> </td>
                         <td><a href="/espaciodeliteratura/admin/PerfilUsuario/index.php?cod=<?php echo $var['idusuario'];?>" class="btn btn-success">Tu perfil</a></td>

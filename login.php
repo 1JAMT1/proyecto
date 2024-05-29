@@ -28,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['login'] = true;
                 
                 if ($usuario['rolUsuario'] == 'admin') {
-                    header("Location: /espaciodeliteratura/admin/index.php");
+                    header("Location: /espaciodeliteratura/BASEDEDATOS.php");
                 } else {
-                    header("Location: /espaciodeliteratura/admin/usuario/index.php?cod=" . $usuario['idusuario']);
+                    header("Location: /espaciodeliteratura/admin/perfilUsuario/index.php?cod=" . $usuario['idusuario']);
                 }
                 exit();
             } else {

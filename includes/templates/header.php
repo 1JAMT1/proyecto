@@ -50,7 +50,6 @@
 						<li><a href="/espaciodeliteratura/QUIENES SOMOS.php">Quienes Somos</a></li>
 						<li><a href="/espaciodeliteratura/BLOG.php">Blog</a></li>
 						<li><a href="/espaciodeliteratura/CONTACTANOS.php">Contactanos</a></li>
-						<li><a href="/espaciodeliteratura/BASEDEDATOS.php">Base de Datos</a></li>
 					</ul>
 
 					<form class="search-form">

@@ -40,7 +40,7 @@
                         <td><?php echo $var['generoLibro']; ?> </td>
                         <!-- inicio de imagen  -->
                         <td>
-                            <img src="imagenes/<?php echo $var['portada']; ?>" >
+                            <img src="imagenes/<?php echo $var['portada']; ?>" style="max-width: 100px; max-height: 100px;" >
                         </td>
                         <!-- fin de imagen -->
                         <td><?php echo $var['precio']; ?> </td>
