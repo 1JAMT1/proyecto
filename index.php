@@ -362,14 +362,26 @@
 					</div>
 				</div>
 			</section>
-
-			<section class="container blogs">
+<!-- inicio de blog -->
+<main class="main-content">
+                <br>
 				<h1 class="heading-1">Últimos Blogs</h1>
+<!-- inicio php -->
 
-				<div class="container-blogs">
+<section class="container blogs">
+<div class="container-blogs">
+
+<?php 
+	require 'includes/config/database.php';
+	$db=conectarDB();
+    $con_sql="SELECT * FROM blog";
+    $res=mysqli_query($db,$con_sql);
+    while($reg=$res->fetch_assoc())
+    {
+?>
 					<div class="card-blog">
 						<div class="container-img">
-							<img src="img/blog-1.jpg" alt="Imagen Blog 1" />
+							<img src="admin/blog/imagenes/<?php echo $reg['imagen']; ?>"  alt="Imagen Blog 2" />
 							<div class="button-group-blog">
 								<span>
 									<i class="fa-solid fa-magnifying-glass"></i>
@@ -380,74 +392,22 @@
 							</div>
 						</div>
 						<div class="content-blog">
-							<h3>Entre Libros y Letras</h3>
+							<h3><?php echo $reg['titulo']; ?></h3>
 							<span>31 octubre 2023</span>
 							<p>
-								Un espacio dedicado a reseñas de libros de 
-								diversos géneros, todos aquellos que 
-							    encuentran refugio, inspiración y compañía 
-								entre las páginas de un libro así como 
-								recomendaciones de lecturas y reflexiones 
-								sobre el mundo literario.
+								<?php echo $reg['contenido']; ?>
 							</p>
 							<div class="btn-read-more">Leer más</div>
 						</div>
 					</div>
-					<div class="card-blog">
-						<div class="container-img">
-							<img src="img/blog-2.jpg" alt="Imagen Blog 2" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-blog">
-							<h3>Viaje Literario</h3>
-							<span>14 julio 2023</span>
-							<p>
-								Un espacio donde los libros se convierten 
-								en mapas cómo la geografía y las palabras
-								en senderos que nos aventuraremos por rincones
-								remotos llevando a través de emocionantes 
-								viajes y reseñas de libros literarios por 
-								todo el mundo.
-							</p>
-							<div class="btn-read-more">Leer más</div>
-						</div>
-					</div>
-					<div class="card-blog">
-						<div class="container-img">
-							<img src="img/blog-3.jpg" alt="Imagen Blog 3" />
-							<div class="button-group-blog">
-								<span>
-									<i class="fa-solid fa-magnifying-glass"></i>
-								</span>
-								<span>
-									<i class="fa-solid fa-link"></i>
-								</span>
-							</div>
-						</div>
-						<div class="content-blog">
-							<h3>El Rincón del Escritor</h3>
-							<span>03 mayo 2023</span>
-							<p>
-								Un espacio acogedor donde los amantes de las 
-								letras pueden encontrar inspiración, recursos, 
-								consejos para escritores, técnicas 
-								de escritura, libros sobre 
-								escritura, entrevistas con autores reconocidos
-								y apoyo para dar vida a sus historias.
-							</p>
-							<div class="btn-read-more">Leer más</div>
-						</div>
-					</div>
-				</div>
+			
+<?php 
+	}
+?>
+</div>
+<!-- fin de php -->
 			</section>
-		</main>
+</main>
 	<?php 
 	include "../espaciodeliteratura/includes/templates/footer.php"; 
 	?>
