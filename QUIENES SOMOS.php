@@ -9,14 +9,13 @@
 				<a href="#">Más información</a>
                 <br><br>
                 <h2>UBICACIÓN</h2>
-
-				<img
-                src="img/ubicacion.jpg"
-                alt="Gallery Img3"
-                class="gallery-img-3"
-            	/>
 			</div>
 		</section>
+		<main class="contenedor seccion">
+<center>
+<img src="img/ubicacion.jpg" alt="">
+</center>
+</main>
 		<?php 
 		include "../espaciodeliteratura/includes/templates/footer.php";  
 		?>

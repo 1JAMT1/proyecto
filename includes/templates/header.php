@@ -26,7 +26,11 @@
 					</div>
 
 					<div class="container-user">
-						<i class="fa-solid fa-user" href="/espaciodeliteratura/admin/usuario/index.php" opendir=""></i>
+					<a href="/espaciodeliteratura/login.php">
+    					<i class="fa-solid fa-user"></i>
+					</a>
+
+
 						<i class="fa-solid fa-basket-shopping" onclick="openPopup()"></i>
 						<div class="content-shopping-cart">
 							<span class="text">Carrito</span>

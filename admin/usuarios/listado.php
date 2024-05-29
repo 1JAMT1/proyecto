@@ -5,6 +5,7 @@
     require '../../includes/funciones.php';
     incluirTemplate('header',$inicio=true);
 ?>
+
 <link rel="stylesheet" href="../../cssa/bootstrap.min.css">
     <main class="contenedor seccion">
         <br>

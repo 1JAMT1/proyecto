@@ -2,6 +2,7 @@
     require '../includes/funciones.php';
     incluirTemplate('header');
 ?>
+
 		<section class="banner">
 			<div class="content-banner">
 				<p>ESPACIO DE LITERATURA</p>
