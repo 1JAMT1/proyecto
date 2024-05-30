@@ -15,7 +15,6 @@
         <a href="../espaciodeliteratura/admin/pedido/listado.php" class="btn btn-dark">Pedidos</a>
         <a href="../espaciodeliteratura/admin/blog/listado.php" class="btn btn-warning">Blogs</a>
         <a href="../espaciodeliteratura/admin/editoriales/listado.php" class="btn btn-primary">Editoriales</a>
-        <a href="../espaciodeliteratura/admin/cliente/idclientes.php" class="btn btn-info">Clientes</a>
         </center>
         <br><br>
     </main>
