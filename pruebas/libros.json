@@ -1,0 +1,38 @@
+[
+{
+    "titulo":"esferas del tiempo",
+    "precio":"$. 5.30",
+    "imagen":"y.jpg",
+    "discount":"13%"
+},
+{
+    "titulo":"terabithia",
+    "precio":"$. 7.30",
+    "imagen":"z.jpg",
+    "discount":"22%"
+},
+{
+    "titulo":"caperucita roja",
+    "precio":"$. 9.30",
+    "imagen":"p.jpg",
+    "discount":"24%"
+},
+{
+    "titulo":"la cenicienta",
+    "precio":"$. 19.30",
+    "imagen":"z.jpg",
+    "discount":"22%"
+},
+{
+    "titulo":"la cenicienta",
+    "precio":"$. 19.30",
+    "imagen":"y.jpg",
+    "discount":"22%"
+},
+{
+    "titulo":"la cenicienta",
+    "precio":"$. 19.30",
+    "imagen":"y.jpg",
+    "discount":"22%"
+}
+]
