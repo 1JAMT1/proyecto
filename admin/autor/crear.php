@@ -5,32 +5,43 @@
     incluirTemplate('header');
 ?>
 <link rel="stylesheet" href="../../cssa/bootstrap.min.css">
-    <main class="contenedor seccion">
-        <br>
-        <h1>Crear Autor</h1>
-        <br>
-        <a href="/espaciodeliteratura/admin/autor/listado.php" class="btn btn-success">Volver</a>
-        <br><br>
-        <form method="post" action="/espaciodeliteratura/admin/autor/registrarautor.php" class="formulario">
-            <fieldset>
-                <legend>Información General</legend>
-                <label for="">Nombre:</label>
-                <input type="text" name="nom" id="nom" placeholder="Nombre">
-                <label for="">Paterno:</label>
-                <input type="text" name="pat" id="pat" placeholder="Paterno">
-                <label for="">Materno:</label>
-                <input type="text" name="mat" id="mat" placeholder="Materno">
-                <label for="">Fecha de Nacimiento:</label>
-                <input type="date" name="fec" id="fec" placeholder="Fechanacimiento">
-                <label for="">Género:</label>
-                <input type="text" name="gen" id="gen" placeholder="Genero">
-                <input type="text">
-            </fieldset>
-            <br>
-            <input type="submit" value="Regristar Autor" class="btn btn-success">
-            <br><br>
-        </form>
-    </main>
+<div class="col-md-4">
+<div class="card">
+                <div class="card-header">
+                    Ingresar datos:
+                </div>
+                <form class="p-4" method="post" action="/espaciodeliteratura/admin/autor/registrarautor.php"
+        enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" name="nom" id="nom" autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Paterno: </label>
+                        <input type="text" class="form-control" name="pat" id="pat"autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Materno: </label>
+                        <input type="text" class="form-control" name="mat" id="mat"autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Genero: </label>
+                        <input type="text" class="form-control" name="gen" id="gen"autofocus required>
+                    </div>
+                    <div class="mb-3">
+                    <label class="form-label">Fecha de Nacimiento: </label>
+                        <input type="date" class="form-control" name="fec" id="fec" autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña: </label>
+                        <input type="password" class="form-control" name="pass" id="pass"autofocus required>
+                    </div>
+                    <div class="d-grid">
+                        <input type="submit" class="btn btn-primary" value="Registrar Autor">
+                    </div>
+                </form>
+            </div>
+        </div>
     <script src="../../jsa/bootstrap.min.js" ></script>
 <?php
     incluirTemplate('footer');

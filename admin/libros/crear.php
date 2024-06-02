@@ -49,7 +49,7 @@
                         <?php 
                             } 
                         ?>
-                    </select>
+                </select>
             <!-- fin editorial -->
             <fieldset>
                 

@@ -46,7 +46,11 @@ require 'includes/funciones.php';
 incluirTemplate('header');
 ?>
 <main class="contenedor seccion contenido-centrado">
-    <h1>Iniciar Sesión</h1>
+    <br><br>
+    <center>
+        <h1>Iniciar Sesión</h1>
+    </center>
+    <br><br>
     <?php foreach ($errores as $error): ?>
         <div class="alerta error">
             <?php echo $error; ?>
@@ -115,8 +119,19 @@ incluirTemplate('header');
         <label for="pas">Password</label>
         <input type="password" name="pas" id="pas" value="" placeholder="Tu password">
     </fieldset>
+    <center>
     <input type="submit" value="Iniciar Sesión" class="boton boton-verde">
+    </center>
 </form>
+<center>
+    <select name="tipo" id="tipo">
+        <option value="a">Autor</option>
+        <option value="b">Ususario</option>
+    </select>
+<a href="../espaciodeliteratura/admin/usuarios/crear.php" class="btn btn-primary">Crear cuenta</a>
+</center>
+<br><br>
+
 
 </main>
 
