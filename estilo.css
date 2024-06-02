@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1.titulo{
     color: #FF4545;
 }
@@ -7,4 +8,15 @@ h2{
 }
 h5{
     margin: 20px;
+=======
+h1.titulo{
+    color: #FF4545;
+}
+h2{
+    color: #FF4545;
+    margin: 20px;
+}
+h5{
+    margin: 20px;
+>>>>>>> 4fa7c70deedd6e817269b12576b6290c86282ab5
 }
