@@ -7,7 +7,7 @@
 <?php
 $jamt_cod = $_GET['cod'];
 $jamt_contador = 1;
-$jamt_con_sql = "SELECT * FROM autor WHERE idautor='$jamt_cod'";
+$jamt_con_sql = "SELECT * FROM usuarios WHERE idusuario='$jamt_cod'";
 $jamt_res = mysqli_query($jamt_db, $jamt_con_sql);
 if ($jamt_res) {
     $jamt_row = mysqli_fetch_array($jamt_res);
@@ -53,18 +53,30 @@ if ($jamt_res) {
         padding: 10px;
         border-radius: 10px;
         background-color: #f9f9f9;
+    }.jamt-profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .jamt-profile img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 50%;
+        margin-right: 20px;
     }
 </style>
-
 <div class="jamt-container">
+<div class="jamt-profile">
+<img src="../usuarios/imagenes/<?php echo htmlspecialchars($jamt_row['imagenUsuario']); ?>" alt="Imagen de perfil">
     <h2 class="jamt-header">Bienvenido a tu perfil: <?php echo htmlspecialchars($jamt_row['nombre'] . " " . $jamt_row['paterno'] . " " . $jamt_row['materno']); ?>
     <?php $cod=$jamt_cod; ?>
     <a href="/espaciodeliteratura/admin/perfilAutor/libro.php" class="btn btn-success">Publicar libro</a>
 </h2>
+</div>
     <h2 class="jamt-header">Tus libros son:</h2>
     <div class="jamt-libros-container">
         <?php
-        $jamt_con_sql1 = "SELECT * FROM libros WHERE idautor='$jamt_cod'";
+        $jamt_con_sql1 = "SELECT * FROM libros WHERE idusuario='$jamt_cod'";
         $jamt_res1 = mysqli_query($jamt_db, $jamt_con_sql1);
         while ($jamt_libro = mysqli_fetch_array($jamt_res1)) {
         ?>
@@ -79,7 +91,7 @@ if ($jamt_res) {
         ?>
     </div>
 </div>
-
+    </div>
 <?php 
     incluirTemplate('footer');
 ?>

@@ -1,8 +1,11 @@
 <?php
-if(!isset($_SESSION)){
-        session_start();
-    }
-    $auth=$_SESSION['login']?? false;
+	if(!isset($_SESSION)){
+			session_start();
+		}
+		$auth=$_SESSION['login']?? false;
+		$rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : null;
+		$cod = isset($_SESSION['idUsuario']) ? $_SESSION['idUsuario'] : null;
+		
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +35,26 @@ if(!isset($_SESSION)){
 					</div>
 
 					<div class="container-user">
-					<a href="/espaciodeliteratura/login.php">
-    					<i class="fa-solid fa-user"></i>
-					</a>
+
 					<?php
-                            if($auth): ?>
+					if ($rol == 'usuario'): ?>
+						<a href="/espaciodeliteratura/admin/perfilUsuario?cod=<?php echo $cod; ?>">
+							<i class="fa-solid fa-user"></i>
+						</a>
+					<?php elseif ($rol == 'autor'): ?>
+						<a href="/espaciodeliteratura/admin/perfilAutor?cod=<?php echo $cod; ?>">
+							<i class="fa-solid fa-user"></i>
+						</a>
+					<?php elseif ($rol == 'admin'): ?>
+					<a href="/espaciodeliteratura/BASEDEDATOS.php">
+						<i class="fa-solid fa-user"></i>
+					</a>
+					<?php endif; ?>
+
+
+
+					<?php
+                    if($auth): ?>
                         <a href="/espaciodeliteratura/admin/cerrarsesion.php">Cerrar Sesion</a>
                         <?php
                             else: ?>

@@ -27,12 +27,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['usuario'] = $usuario['gmail'];
                 $_SESSION['idUsuario']=$usuario['idusuario'];
                 $_SESSION['login'] = true;
+                $_SESSION['rol'] =$usuario['rolUsuario'];
                 
                 if ($usuario['rolUsuario'] == 'admin') {
                     header("Location: /espaciodeliteratura/BASEDEDATOS.php");
-                } else {
+                }
+                if($usuario['rolUsuario']=='usuario'){
                     header("Location: /espaciodeliteratura/admin/perfilUsuario/index.php?cod=" . $usuario['idusuario']);
                 }
+                if($usuario['rolUsuario']=='autor'){
+                    header("Location: /espaciodeliteratura/admin/perfilAutor/index.php?cod=" . $usuario['idusuario']);
+                }
+
                 exit();
             } else {
                 $errores[] = "El password es incorrecto";
@@ -124,18 +130,12 @@ incluirTemplate('header');
     <input type="submit" value="Iniciar Sesión" class="boton boton-verde">
     </center>
 </form>
+<br>
 <center>
-    <select name="tipo" id="tipo">
-        <option value="a">Autor</option>
-        <option value="b">Ususario</option>
-    </select>
-<a href="../espaciodeliteratura/admin/usuarios/crear.php" class="btn btn-primary">Crear cuenta</a>
+<a href="../espaciodeliteratura/admin/usuarios/crear.php" class="btn btn-warning">Crear cuenta</a>
 </center>
 <br><br>
-
-
 </main>
-
 <?php
 incluirTemplate('footer');
 ?>

@@ -13,6 +13,18 @@
                 <form class="p-4" method="post" action="/espaciodeliteratura/admin/usuarios/registrarusuario.php"
         enctype="multipart/form-data">
                     <div class="mb-3">
+                        <label class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" name="nom" id="nom" autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido Paterno: </label>
+                        <input type="text" class="form-control" name="pat" id="pat" autofocus required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Apellido Materno: </label>
+                        <input type="text" class="form-control" name="mat" id="mat" autofocus required>
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">NickName: </label>
                         <input type="text" class="form-control" name="nick" id="nick" autofocus required>
                     </div>
@@ -32,12 +44,21 @@
                         <label class="form-label">Contraseña: </label>
                         <input type="password" class="form-control" name="pass" id="pass"autofocus required>
                     </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="">Que seras</label>
+                        <select  name="rol" id="rol">
+                            <option  value="usuario">Usuario</option>
+                            <option  value="autor">Autor</option>
+                        </select>
+                    </div>
                     <div class="d-grid">
-                        <input type="submit" class="btn btn-primary" value="Registrar Usuario">
+                        <input type="submit" class="btn btn-primary" value="Registrar">
                     </div>
                 </form>
+
             </div>
         </div>
+        <a href="/espaciodeliteratura" class="btn btn-warning">Volver</a>
 
     <script src="../../jsa/bootstrap.min.js" ></script>
 <?php
