@@ -42,24 +42,6 @@
 				</div>
 			</section>
 
-			<section class="container top-categories">
-				<h1 class="heading-1">Temas más Leidos</h1>
-				<div class="container-categories">
-					<div class="card-category category-moca">
-						<p>Ficción y Aventura</p>
-						<span>Ver más</span>
-					</div>
-					<div class="card-category category-expreso">
-						<p>Comedia</p>
-						<span>Ver más</span>
-					</div>
-					<div class="card-category category-capuchino">
-						<p>Romanticas y fantasia</p>
-						<span>Ver más</span>
-					</div>
-				</div>
-			</section>
-
 			<section class="container top-products">
 				<h1 class="heading-1">Mejores Libros</h1>
 
@@ -205,29 +187,7 @@
 				</div>
 			</section>
 
-			<section class="gallery">
-				<img
-					src="img/gallery1.jpg"
-					alt="Gallery Img1"
-					class="gallery-img-1"
-				/><img
-					src="img/gallery2.jpg"
-					alt="Gallery Img2"
-					class="gallery-img-2"
-				/><img
-					src="img/gallery3.jpg"
-					alt="Gallery Img3"
-					class="gallery-img-3"
-				/><img
-					src="img/gallery4.jpg"
-					alt="Gallery Img4"
-					class="gallery-img-4"
-				/><img
-					src="img/gallery5.jpg"
-					alt="Gallery Img5"
-					class="gallery-img-5"
-				/>
-			</section>
+
 
 			<section class="container specials">
 				<h1 class="heading-1">Libros por Comprar</h1>

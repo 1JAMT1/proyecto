@@ -9,7 +9,7 @@
         //fecha 
         $fechaHoraActual = new DateTime();
         $fecha_actual = $fechaHoraActual->format("Y-m-d");
-        $con_sql="INSERT INTO pedido (idusuario,idlibro,cantidad,fechacompra) VALUES ('$u','$l','$c','$fecha_actual')";
+        $con_sql="INSERT INTO pedido (idusuario,idlibro,fechacompra) VALUES ('$u','$l','$fecha_actual')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             echo "

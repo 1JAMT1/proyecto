@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="/espaciodeliteratura/styles.css">
 	<link rel="stylesheet" href="/espaciodeliteratura/estilos.css">
 </head>
@@ -54,10 +55,10 @@
 
 					<?php
                     if($auth): ?>
-                        <a href="/espaciodeliteratura/admin/cerrarsesion.php">Cerrar Sesion</a>
+                        <a href="/espaciodeliteratura/admin/cerrarsesion.php" class="btn btn-danger">Cerrar Sesion</a>
                         <?php
                             else: ?>
-                        <a href="/espaciodeliteratura/login.php">Iniciar Sesion</a>
+                        <a href="/espaciodeliteratura/login.php" class="btn btn-success">Iniciar Sesion</a>
                         <?php 
                     endif; ?>
 					</div>
