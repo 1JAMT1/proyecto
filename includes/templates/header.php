@@ -35,7 +35,6 @@
 					</div>
 
 					<div class="container-user">
-
 					<?php
 					if ($rol == 'usuario'): ?>
 						<a href="/espaciodeliteratura/admin/perfilUsuario?cod=<?php echo $cod; ?>">

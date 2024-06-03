@@ -49,7 +49,7 @@
             </tbody>
         </table>
         </h3>
-        <a href="/espaciodeliteratura/BASEDEDATOS.php" class="btn btn-warning">Volver</a>
+        <a href="/espaciodeliteratura/login.php" class="btn btn-warning">Volver</a>
         <br><br>
     </main>
     <script src="../../jsa/bootstrap.min.js" ></script>
