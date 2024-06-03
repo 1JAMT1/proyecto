@@ -83,6 +83,8 @@ if ($jamt_res) {
             <div class="jamt-libro">
                 <h3>Título: <?php echo htmlspecialchars($jamt_libro['titulo']); ?></h3>
                 <h3>Fecha: <?php echo htmlspecialchars($jamt_libro['fechacreacion']); ?></h3>
+                <h3>Descripcion: <?php echo htmlspecialchars($jamt_libro['descripcion']); ?></h3>
+                <h3>Genero: <?php echo htmlspecialchars($jamt_libro['generoLibro']); ?></h3>
                 <img class="jamt-image" src="../libros/imagenes/<?php echo htmlspecialchars($jamt_libro['portada']); ?>" alt="Portada del libro">
             </div>
         <?php

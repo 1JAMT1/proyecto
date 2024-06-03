@@ -59,10 +59,7 @@ $id=$_SESSION['idUsuario'];
 		<div class="container-products">
 
 <?php
-	//SELECT * FROM libros ORDER BY titulo ASC
-	$consql=("SELECT p.*,v.idautor,v.nombre,v.paterno FROM libros
-	p INNER JOIN autor v ON 
-	p.idautor=v.idautor ORDER BY p.titulo ASC");
+	$consql = "SELECT * FROM libros ORDER BY titulo ASC";
 	$resultado=mysqli_query($db,$consql);
 	while($var=mysqli_fetch_array($resultado))
 	{

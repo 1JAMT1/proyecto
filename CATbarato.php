@@ -51,11 +51,8 @@
         <div class="container-products">
 
                 <?php
-                    //SELECT * FROM libros ORDER BY titulo ASC
-                    $consql=("SELECT p.*,v.idautor,v.nombre,v.paterno FROM libros
-                    p INNER JOIN autor v ON 
-                    p.idautor=v.idautor where p.precio < 6");
-                    $resultado=mysqli_query($db,$consql);
+                   $consql = "SELECT p.* FROM libros AS p WHERE p.precio < 6";
+                   $resultado=mysqli_query($db,$consql);
                     while($var=mysqli_fetch_array($resultado))
                     {
                 ?>
@@ -94,7 +91,6 @@
                     }
                 ?>
 </div>
-        <a href="/espaciodeliteratura/BASEDEDATOS.php" class="btn btn-warning">Volver</a>
         <br><br>
     </main>
     <script src="../../jsa/bootstrap.min.js" ></script>
