@@ -83,6 +83,8 @@
         <h2>Bienvenido  <?php echo htmlspecialchars($jamt_usuario['nickname']); ?>
         <?php $cod=$jamt_cod; ?>
         <a href="/espaciodeliteratura/admin/perfilUsuario/blog.php?cod=<?php echo $cod;?>" class="btn btn-success">Publicar blog</a>
+        <a href="/espaciodeliteratura/admin/usuarios/actualizar.php?cod=<?php echo $cod;?>" class="btn btn-primary">Actualizar perfil</a>
+
     </h2>
     </div>
 

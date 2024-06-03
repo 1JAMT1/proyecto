@@ -7,13 +7,14 @@
     {
         $i=$_POST['idu'];
         $g=$_POST['gma'];
-        $p=$_POST['pas'];
         $telefono=$_POST['tel'];
         $nickname=$_POST['nick'];
+        $nombre=$_POST['nom'];
+        $paterno=$_POST['pat'];
+        $materno=$_POST['mat'];
         $con_sql="UPDATE usuarios 
-        SET idusuario='$i',gmail='$g',password='$p'
-        ,telefono='$telefono',nickname='$nickname'
-        WHERE idusuario='$cod')";
+        SET idusuario='$i',gmail='$g',telefono='$telefono',nombre='$nombre',paterno='$paterno'
+        ,materno='$materno',nickname='$nickname' WHERE idusuario='$cod')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             echo "

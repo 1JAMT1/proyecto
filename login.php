@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['idUsuario']=$usuario['idusuario'];
                 $_SESSION['login'] = true;
                 $_SESSION['rol'] =$usuario['rolUsuario'];
+                $_SESSION['pass']=$usuario['password'];
                 
                 if ($usuario['rolUsuario'] == 'admin') {
                     header("Location: /espaciodeliteratura/BASEDEDATOS.php");

@@ -71,6 +71,7 @@ if ($jamt_res) {
     <h2 class="jamt-header">Bienvenido a tu perfil: <?php echo htmlspecialchars($jamt_row['nombre'] . " " . $jamt_row['paterno'] . " " . $jamt_row['materno']); ?>
     <?php $cod=$jamt_cod; ?>
     <a href="/espaciodeliteratura/admin/perfilAutor/libro.php?cod=<?php echo $cod; ?>" class="btn btn-success">Publicar libro</a>
+    <a href="/espaciodeliteratura/admin/usuarios/actualizar.php?cod=<?php echo $cod;?>" class="btn btn-primary">Actualizar perfil</a>
 </h2>
 </div>
     <h2 class="jamt-header">Tus libros son:</h2>

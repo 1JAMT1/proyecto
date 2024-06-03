@@ -7,17 +7,20 @@
     if(isset($_POST['Modificar']))
     {
         $var=$_POST['gma'];
-        $varchar=$_POST['pas'];
         $tel=$_POST['tel'];
         $nick=$_POST['nick'];
-        $con_sql="UPDATE usuarios SET gmail='$var', password='$varchar', 
+        $nombre=$_POST['nom'];
+        $paterno=$_POST['pat'];
+        $materno=$_POST['mat'];
+        $con_sql="UPDATE usuarios SET gmail='$var'
+        ,nombre='$nombre', paterno='$paterno',materno='$materno', 
         telefono='$tel', nickname='$nick' WHERE idusuario='$cod'";
         $resm=mysqli_query($db,$con_sql);
         if($resm){
             echo "
             <script>
                 window.alert('registro modificado con exito');
-                window.location='listado.php';
+                window.location='/espaciodeliteratura/index.php';
             </script>
             ";
         }
@@ -26,10 +29,8 @@
 <link rel="stylesheet" href="../../cssa/bootstrap.min.css">
     <main class="contenedor seccion">
         <br>
-        <h1>Modificar Usuario</h1>
-        <br>
-        <a href="/espaciodeliteratura/admin/usuarios/listado.php" class="btn btn-success">Volver</a>
-        <br><br>
+        <h1>Modificar Tu Perfil</h1>
+
         <?php
              $consulta="SELECT * FROM usuarios WHERE idusuario='$cod'";
             $res = mysqli_query($db,$consulta);
@@ -43,16 +44,24 @@
                 <td><input type="varchar" class="form-control" name="gma" id="gma" value="<?php echo $fila['gmail']; ?> "></td>
             </tr>
             <tr>
-                <td>Password</td>
-                <td><input type="varchar" class="form-control" name="pas" id="pas" value="<?php echo $fila['password']; ?> "></td>
-            </tr>
-            <tr>
                 <td>Telefono</td>
                 <td><input type="number" class="form-control" name="tel" id="tel" value="<?php echo $fila['telefono']; ?>"></td>
             </tr>
             <tr>
                 <td>Nickname</td>
                 <td><input type="text" class="form-control" name="nick" id="nick" value="<?php echo $fila['nickname']; ?>"></td>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" class="form-control" name="nom" id="nom" value="<?php echo $fila['nombre']; ?>"></td>
+            </tr>
+            <tr>
+                <td>Apellido Paterno</td>
+                <td><input type="text" class="form-control" name="pat" id="pat" value="<?php echo $fila['paterno']; ?>"></td>
+            </tr>
+            <tr>
+                <td>Apellido Materno</td>
+                <td><input type="text" class="form-control" name="mat" id="mat" value="<?php echo $fila['materno']; ?>"></td>
             </tr>
             <tr>
             <td colspan="3">

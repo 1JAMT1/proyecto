@@ -21,15 +21,12 @@
                 <th> Precio </th>
                 <th> Descripción </th>
                 <th> Editorial </th>
-                <th> Autor</th>
                 <th> Cantidad </th>
                 <th colspan="2"> Acciones </th>
             </thad>
             <tbody>
                 <?php
-                    $consql=("SELECT p.*,v.* FROM libros
-                    p INNER JOIN autor v ON 
-                    p.idautor=v.idautor WHERE estado='activo'");
+                    $consql=("SELECT * FROM libros");
                     $resultado=mysqli_query($db,$consql);
                     while($var=mysqli_fetch_array($resultado))
                     {
@@ -52,9 +49,6 @@
                         $editorial=mysqli_fetch_array($resultado1);
                         ?>
                         <td><?php echo $editorial['nombreEditorial']; ?> </td>
-                        <td><?php echo $var['nombre']." ".$var['paterno'] ; ?> </td>
-
-                        <td><?php echo $var['cantidadLibro']; ?></td>
                         <td><a href="borrar.php?cod=<?php echo $var['idlibro']; ?>"class="btn btn-danger">Eliminar</a></td>
                         <td><a href="actualizar.php?cod=<?php echo $var['idlibro']; ?>"class="btn btn-info">Actualizar</a></td>
                 </tr>
