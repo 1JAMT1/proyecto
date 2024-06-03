@@ -33,7 +33,7 @@
                 ?>
             </tbody>
         </table>
-        <a href="/espaciodeliteratura/BASEDEDATOS.php" class="btn btn-warning">Volver</a>
+        <a href="/espaciodeliteratura/login.php" class="btn btn-warning">Volver</a>
 <?php
 incluirTemplate('footer');
 ?>

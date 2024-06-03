@@ -120,21 +120,12 @@ incluirTemplate('header');
         <input type="password" name="pas" id="pas" value="" placeholder="Tu password">
     </fieldset>
     <center>
-    <input type="submit" value="Iniciar Sesión" class="boton boton-verde">
+    <a href="../espaciodeliteratura/admin/usuarios/listado.php"><input type="submit" value="Iniciar Sesión" class="boton boton-verde"></a>
     </center>
 </form>
-<center>
-    <select name="tipo" id="tipo">
-        <option value="a">Autor</option>
-        <option value="b">Ususario</option>
-    </select>
-<a href="../espaciodeliteratura/admin/usuarios/crear.php" class="btn btn-primary">Crear cuenta</a>
-</center>
-<br><br>
-
 
 </main>
-
+<br><br>
 <?php
 incluirTemplate('footer');
 ?>
