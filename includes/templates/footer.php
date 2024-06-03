@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<link rel="stylesheet" href="/espaciodeliteratura/css/gotop.css">
-	<link rel="stylesheet" href="/espaciodeliteratura/styles.css">
-	<link rel="stylesheet" href="/espaciodeliteratura/estilos.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="/../espaciodeliteratura/css/gotop.css">
+	<link rel="stylesheet" href="/../espaciodeliteratura/styles.css">
+	<link rel="stylesheet" href="/../estilos.css">
 </head>
 <body>
 	<div class="go-top-container">
@@ -68,7 +67,7 @@
 							<li><a href="/espaciodeliteratura/reembolsos.php">Reembolsos</a></li>
 						</ul>
 					</div>
-
+					<!--
 					<div class="newsletter">
 						<p class="title-footer">Boletín informativo</p>
 
@@ -80,7 +79,7 @@
 							<input type="email" placeholder="Ingresa el correo aquí...">
 							<button onclick="openPopup1()">Suscríbete</button>
 						</div>
-					</div>
+					</div>-->
 				</div>
 
 				<div class="copyright">
