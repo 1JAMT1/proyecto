@@ -8,10 +8,6 @@ $id=$_SESSION['idUsuario'];
     $db=conectarDB();
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<<<<<<< HEAD
-
-=======
->>>>>>> 52339e73930b2bba8c547f94c98d18ce3927aa32
         <section class="banner">
 			<div class="content-banner">
 				<p>Catalogo</p>
