@@ -70,7 +70,7 @@ if ($jamt_res) {
 <img src="../usuarios/imagenes/<?php echo htmlspecialchars($jamt_row['imagenUsuario']); ?>" alt="Imagen de perfil">
     <h2 class="jamt-header">Bienvenido a tu perfil: <?php echo htmlspecialchars($jamt_row['nombre'] . " " . $jamt_row['paterno'] . " " . $jamt_row['materno']); ?>
     <?php $cod=$jamt_cod; ?>
-    <a href="/espaciodeliteratura/admin/perfilAutor/libro.php" class="btn btn-success">Publicar libro</a>
+    <a href="/espaciodeliteratura/admin/perfilAutor/libro.php?cod=<?php echo $cod; ?>" class="btn btn-success">Publicar libro</a>
 </h2>
 </div>
     <h2 class="jamt-header">Tus libros son:</h2>
@@ -83,7 +83,6 @@ if ($jamt_res) {
             <div class="jamt-libro">
                 <h3>Título: <?php echo htmlspecialchars($jamt_libro['titulo']); ?></h3>
                 <h3>Fecha: <?php echo htmlspecialchars($jamt_libro['fechacreacion']); ?></h3>
-                <h3>Cantidad: <?php echo htmlspecialchars($jamt_libro['cantidadLibro']); ?></h3>
                 <img class="jamt-image" src="../libros/imagenes/<?php echo htmlspecialchars($jamt_libro['portada']); ?>" alt="Portada del libro">
             </div>
         <?php
