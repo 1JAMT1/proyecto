@@ -1,7 +1,10 @@
 <?php
-    $inicio=false;
+if(!isset($_SESSION)){
+	session_start();
+}
+$id=$_SESSION['idUsuario'];
     include "../espaciodeliteratura/includes/templates/header.php";
-	    require '../espaciodeliteratura/includes/config/database.php';
+	require '../espaciodeliteratura/includes/config/database.php';
     $db=conectarDB();
 ?>
         <section class="banner">
@@ -90,7 +93,8 @@
 			</div>
 			<h3><?php echo $var['titulo']; ?></h3>
 			<span class="add-cart">
-			<a href="#" onclick="openPopup()"><i class="fa-solid fa-basket-shopping"></i> </a>
+			<a href="/espaciodeliteratura/admin/pedido/registrarpedido1.php?idu=<?php echo $id;?>&
+			idl=<?php echo $var['idlibro']; ?>"><i class="fa-solid fa-basket-shopping"></i></a>
 			</span>
 			<p class="price"><?php echo $var['precio']; ?></p>
 		</div>
