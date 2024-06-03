@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION)){
+        session_start();
+    }
+    $auth=$_SESSION['login']?? false;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +35,14 @@
 					<a href="/espaciodeliteratura/rol.php">
     					<i class="fa-solid fa-user"></i>
 					</a>
-
-
-						<i class="fa-solid fa-basket-shopping" onclick="openPopup()"></i>
-						<div class="content-shopping-cart">
-							<span class="text">Carrito</span>
-							<span class="number">(0)</span>
-						</div>
+					<?php
+                            if($auth): ?>
+                        <a href="/espaciodeliteratura/admin/cerrarsesion.php">Cerrar Sesion</a>
+                        <?php
+                            else: ?>
+                        <a href="/espaciodeliteratura/login.php">Iniciar Sesion</a>
+                        <?php 
+                    endif; ?>
 					</div>
 				</div>
 			</div>

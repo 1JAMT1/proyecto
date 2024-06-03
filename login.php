@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($auth) {
                 session_start();
                 $_SESSION['usuario'] = $usuario['gmail'];
+                $_SESSION['idUsuario']=$usuario['idusuario'];
                 $_SESSION['login'] = true;
                 
                 if ($usuario['rolUsuario'] == 'admin') {
