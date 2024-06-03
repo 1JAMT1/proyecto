@@ -28,7 +28,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Fecha de Creación: </label>
-                        <input type="date" class="form-control" name="fec" id=  autofocus required>
+                        <input type="date" class="form-control" name="fec" id="fec" autofocus required>
                     </div>
                     <div class="mb-3">
                         <label for="form-label">Genero: </label>

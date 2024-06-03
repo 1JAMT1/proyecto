@@ -5,7 +5,7 @@
     if($_POST){
         $nick=$_POST['nick'];
         $g=$_POST['gma'];
-        $p=$_POST['pas'];
+        $p=$_POST['pass'];
         $a=$_FILES['ima']['name'];
         $b=$_POST['num'];
 
