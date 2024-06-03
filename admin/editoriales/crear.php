@@ -1,6 +1,6 @@
 <?php
     require '../../includes/config/database.php';
-    conectarDB();
+    $db=conectarDB();
     require '../../includes/funciones.php';
     incluirTemplate('header');
 ?>
@@ -15,7 +15,7 @@
             <fieldset>
                 <legend>Información General</legend>
                 <label for="">Nombre de Editorial:</label>
-                <input type="text" name="nom" id="nom" placeholder="Nombre">
+                <input type="text" name="nom" id="nom" placeholder="NombreEditorial">
             </fieldset>
             <br>
             <input type="submit" value="Regristar Editorial" class="btn btn-success">
@@ -23,7 +23,9 @@
         </form>
     </main>
     <script src="../../jsa/bootstrap.min.js" ></script>
-
+<?php
+    incluirTemplate('footer');
+?>
 
 
 
