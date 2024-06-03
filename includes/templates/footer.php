@@ -56,32 +56,7 @@
 							<li><a href="/espaciodeliteratura/CONTACTANOS.php">Contactános</a></li>
 						</ul>
 					</div>
-
-					<div class="my-account">
-						<p class="title-footer">Mi cuenta</p>
-
-						<ul>
-							<li><a href="/espaciodeliteratura/admin/usuario/index.php">Mi cuenta</a></li>
-							<li><a href="/espaciodeliteratura/admin/pedido/listado.php">Historial de ordenes</a></li>
-							<li><a href="/espaciodeliteratura/boletin.php">Boletín</a></li>
-							<li><a href="/espaciodeliteratura/reembolsos.php">Reembolsos</a></li>
-						</ul>
-					</div>
-					<!--
-					<div class="newsletter">
-						<p class="title-footer">Boletín informativo</p>
-
-						<div class="content">
-							<p>
-								Suscríbete a nuestros boletines ahora y mantente al
-								día con nuevas colecciones y ofertas exclusivas.
-							</p>
-							<input type="email" placeholder="Ingresa el correo aquí...">
-							<button onclick="openPopup1()">Suscríbete</button>
-						</div>
-					</div>-->
 				</div>
-
 				<div class="copyright">
 					<p>
 						Desarrollado por G1

@@ -1,4 +1,9 @@
 <?php
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    $rol=$_SESSION['rol'];
+    $idu=$_SESSION['idUsuario'];
     require '../../includes/config/database.php';
     $db=conectarDB();
     //var_dump($db);
@@ -10,7 +15,21 @@
         <br>
         <h1>Eliminar</h1>
         <br>
-        <a href="/espaciodeliteratura/admin/blog/listado.php" class="btn btn-success">Volver</a>
+
+        <a <?php if ($rol == 'admin') {; ?>
+                    href="/espaciodeliteratura/BASEDEDATOS.php"
+                <?php }; ?>
+                <?php
+                if($rol=='usuario'){; ?>
+                    href="/espaciodeliteratura/admin/perfilUsuario/index.php?cod=<?php echo $idu;?>"
+                <?php
+                };?>
+                <?php 
+                if($rol=='autor'){; ?>
+                    href="/espaciodeliteratura/admin/perfilAutor/index.php?cod=<?php echo $idu;?>"
+                <?php
+                }; ?>
+        class="btn btn-success">Volver</a>
         <br><br>
         <?php
             $id=$_GET['cod'];

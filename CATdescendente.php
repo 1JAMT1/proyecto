@@ -80,9 +80,10 @@
 								<i class="fa-regular fa-star"></i>
 							</div>
 							<h3><?php echo $var['titulo']; ?></h3>
-							<span class="add-cart">
-							<a href="#" onclick="openPopup()"><i class="fa-solid fa-basket-shopping"></i> </a>
-							</span>
+              <span class="add-cart">
+			<a href="/espaciodeliteratura/admin/pedido/registrarpedido1.php?idu=<?php echo $id;?>&
+			idl=<?php echo $var['idlibro']; ?>"><i class="fa-solid fa-basket-shopping"></i></a>
+			</span>
 							<p class="price"><?php echo $var['precio']; ?></p>
 						</div>
 					</div>

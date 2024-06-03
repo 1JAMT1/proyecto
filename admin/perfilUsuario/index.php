@@ -95,7 +95,6 @@
         ?>
             <div class="jamt-card">
                 <h3>Fecha de pedido: <?php echo htmlspecialchars($jamt_pedido['fechacompra']); ?></h3>
-                <h3>Cantidad: <?php echo htmlspecialchars($jamt_pedido['cantidad']); ?></h3>
                 <?php
                 $jamt_codLibro = $jamt_pedido['idlibro'];
                 $jamt_con_sql1 = "SELECT * FROM libros WHERE idLibro='$jamt_codLibro'";
@@ -103,6 +102,7 @@
                 $jamt_libro = mysqli_fetch_array($jamt_res2);
                 ?>
                 <h3>Título: <?php echo htmlspecialchars($jamt_libro['titulo']); ?></h3>
+                <h3>Precio: <?php echo htmlspecialchars($jamt_libro['precio']); ?></h3>
             </div>
         <?php
         }
