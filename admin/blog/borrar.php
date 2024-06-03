@@ -14,7 +14,7 @@
         <br><br>
         <?php
             $id=$_GET['cod'];
-            $con="Delete from blog where idblog = $id";
+            $con="DELETE FROM blog WHERE idblog = $id";
             $res=mysqli_query($db,$con);
             if($res){
                 echo "Se Elimino";

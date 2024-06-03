@@ -80,7 +80,10 @@
     ?>
     <div class="jamt-profile">
         <img src="../usuarios/imagenes/<?php echo htmlspecialchars($jamt_usuario['imagenUsuario']); ?>" alt="Imagen de perfil">
-        <h2>Bienvenido  <?php echo htmlspecialchars($jamt_usuario['nickname']); ?></h2>
+        <h2>Bienvenido  <?php echo htmlspecialchars($jamt_usuario['nickname']); ?>
+        <?php $cod=$jamt_cod; ?>
+        <a href="/espaciodeliteratura/admin/perfilUsuario/blog.php?cod=<?php echo $cod;?>" class="btn btn-success">Publicar blog</a>
+    </h2>
     </div>
 
     <h2 class="jamt-header">Tus pedidos son:</h2>
@@ -119,6 +122,7 @@
                     <h3>Título: <?php echo htmlspecialchars($jamt_blog['titulo']); ?></h3>
                     <p><?php echo nl2br(htmlspecialchars($jamt_blog['contenido'])); ?></p>
                 </div>
+                <a href="/espaciodeliteratura/admin/blog/borrar.php?cod=<?php echo $jamt_blog['idblog']; ?>"class="btn btn-danger">Eliminar</a>
             </div>
         <?php
         }

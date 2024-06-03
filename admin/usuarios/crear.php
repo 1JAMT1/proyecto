@@ -26,7 +26,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Imagen: </label>
-                        <input type="file" name="ima" id="ima" accept="image/jpeg, image/png, image/jpg">
+                        <input type="file" class="form-control" name="ima" id="ima" accept="image/jpeg, image/png, image/jpg">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Contraseña: </label>
