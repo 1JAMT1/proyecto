@@ -1,5 +1,5 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
 <?php
 require 'includes/config/database.php';
 $db = conectarDB();
@@ -128,6 +128,7 @@ incluirTemplate('header');
         <input type="email" name="ema" id="ema" value="" placeholder="Tu email">
         <label for="pas">Password</label>
         <input type="password" name="pas" id="pas" value="" placeholder="Tu password">
+        <!--<input type="button" name="wf" onclick="mostrar()" value="Mostrar Contraseña">-->
     </fieldset>
     <center>
     <a href="../espaciodeliteratura/admin/usuarios/listado.php"><input type="submit" value="Iniciar Sesión" class="boton boton-verde"></a>
@@ -142,6 +143,17 @@ incluirTemplate('header');
 
 </main>
 <br><br>
+<!--<script type="text/javascript">
+    function mostrar() {
+        var tipo = document.getElementById("pas");
+
+        if(tipo.type == 'password'){
+            tipo.type = 'text';
+        } else {
+            tipo.type = 'password';
+        }
+    }
+</script>-->
 <?php
 incluirTemplate('footer');
 ?>

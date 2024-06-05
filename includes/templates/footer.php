@@ -24,8 +24,8 @@
 								Dirección: 777 LA paz bo, 
 							</li>
 							<li>Teléfono: 1234567890</li>
-							<li>Fax: 4444444444</li>
-							<li>EmaiL: pepito@support.com</li>
+							<!--<li>Fax: 4444444444</li>
+							<li>EmaiL: pepito@support.com</li>-->
 						</ul>
 						<div class="social-icons">
 							<span class="facebook">
@@ -45,12 +45,34 @@
 							</span>
 						</div>
 					</div>
+					<div class="contact-info">
+						<p class="title-footer"></p>
+						<ul>
+							<br>
+							<!--<li>
+								Dirección: 777 LA paz bo, 
+							</li>
+							<li>Teléfono: 1234567890</li>-->
+							<li>Fax: 4444444444</li>
+							<li>EmaiL: pepito@support.com</li>
+						</ul>
+					</div>
 
 					<div class="information">
 						<p class="title-footer">Información</p>
 						<ul>
 							<li><a href="/espaciodeliteratura/QUIENES SOMOS.php">Acerca de Nosotros</a></li>
 							<li><a href="/espaciodeliteratura/delivery.php">Información Delivery</a></li>
+							<!--<li><a href="/espaciodeliteratura/privacidad.php">Politicas de Privacidad</a></li>
+							<li><a href="/espaciodeliteratura/terminos.php">Términos y condiciones</a></li>
+							<li><a href="/espaciodeliteratura/CONTACTANOS.php">Contactános</a></li>-->
+						</ul>
+					</div>
+					<div class="information">
+						<p class="title-footer"></p>
+						<ul>
+							<!--<li><a href="/espaciodeliteratura/QUIENES SOMOS.php">Acerca de Nosotros</a></li>
+							<li><a href="/espaciodeliteratura/delivery.php">Información Delivery</a></li>-->
 							<li><a href="/espaciodeliteratura/privacidad.php">Politicas de Privacidad</a></li>
 							<li><a href="/espaciodeliteratura/terminos.php">Términos y condiciones</a></li>
 							<li><a href="/espaciodeliteratura/CONTACTANOS.php">Contactános</a></li>

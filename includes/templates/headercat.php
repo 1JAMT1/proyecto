@@ -1,3 +1,7 @@
+<?php
+    require '../../includes/config/database.php';
+    $db=conectarDB();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 	<script src="https://kit.fontwesone.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="../espaciodeliteratura/styles.css">
-	<link rel="stylesheet" href="../espaciodeliteratura/estilos.css">
-	<link rel="stylesheet" href="../espaciodeliteratura/buscador.css">
+	<link rel="stylesheet" href="/espaciodeliteratura/styles.css">
+	<link rel="stylesheet" href="/espaciodeliteratura/estilos.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <header class="header <?php echo $inicio ? 'inicio' : ''; ?>">
@@ -54,27 +58,41 @@
 						<li><a href="/espaciodeliteratura/CONTACTANOS.php">Contactanos</a></li>
 					</ul>
 
-					<div id="icon-menu">
-						<i class="fas fa-bars"></i>
-						<input type="search" placeholder="Buscar..." />
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</div>
-
-						<ul id="box-search">
-							<li><a href="#"><i class="fas fa-search"></i>Romance</a></li>
-							<li><a href="#"><i class="fas fa-search"></i>Fantasía</a></li>
-							<li><a href="#"><i class="fas fa-search"></i>Ficción</a></li>
-							<li><a href="#"><i class="fas fa-search"></i>Terror</a></li>
-							<li><a href="#"><i class="fas fa-search"></i>Cocina</a></li>
-							<li><a href="#"><i class="fas fa-search"></i>Poesía</a></li>
-						</ul>
-
-						<div id="cover-ctn-search"></div>
-
 				</nav>
 			</div>
+			<form action="" method="get">
+						<input type = "text" name="busqueda"> <br>
+						<input type = "submit" name="enviar" value="Buscar">
+					</form>
+
+					<br>
+
+					<?php
+
+						if(isset($_GET['enviar'])) {
+							$busqueda = $_GET['busqueda'];
+
+							$consulta = $db->query("SELECT * FROM libros WHERE titulo LIKE '%$busqueda%'");
+
+							while ($row = $consulta->fetch_array()) {
+								echo $row['titulo'].'<br>';
+								echo $row['fechacreacion'].'<br>';
+								echo $row['generoLibro'].'<br>';
+								echo $row['portada'].'<br>';
+								echo $row['precio'].'<br>';
+								echo $row['descripcion'].'<br>';
+								echo $row['editorial'].'<br>';
+							}
+						}
+
+					?>
+
 	</header>
-	<script>
+	<script
+	src="https://kit.fontawesome.com/81581fb069.js">
+	</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>	
+<script>
     function openPopup() {
         var url = 'carrito.php'; 
         var opciones = 'width=600,height=400,scrollbars=yes,resizable=yes';
