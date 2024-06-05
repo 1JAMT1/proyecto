@@ -11,6 +11,7 @@
             echo "
                 <script> 
                     alert ('Se registro');
+                    window.location.href = '/espaciodeliteratura/admin/editoriales/listado.php';
                 </script>
             ";
         }

@@ -16,6 +16,7 @@
             echo "
                 <script> 
                     alert ('Se registro');
+                    window.location.href = '/espaciodeliteratura/BASEDEDATOS.php';
                 </script>
             ";
         }

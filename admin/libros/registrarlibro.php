@@ -11,10 +11,8 @@
         $r=$_POST['pre'];
         $d=$_POST['des'];
         $edi=$_POST['idEd'];
-        $cantidad=$_POST['cant'];
-        $con_sql="INSERT INTO libros (titulo,idautor,fechacreacion,generoLibro,portada,precio,estado,descripcion,editorial,
-        cantidadLibro)
-         VALUES ('$t','$i','$f','$g','$p','$r','activo','$d','$edi','$cantidad')";
+        $con_sql="INSERT INTO libros (titulo,idusuario,fechacreacion,generoLibro,portada,precio,estado,descripcion,editorial)
+         VALUES ('$t','$i','$f','$g','$p','$r','activo','$d','$edi')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             $tmp=$_FILES['por']['tmp_name'];
@@ -22,6 +20,7 @@
             echo "
                 <script> 
                     alert ('Se registro');
+                    window.location.href = '/espaciodeliteratura/admin/libros/listado.php';
                 </script>
             ";
         }

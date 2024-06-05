@@ -30,8 +30,6 @@
                 <input type="decimal" name="pre" id="pre" placeholder="Precio">
                 <label for="">Descripción:</label>
                 <input type="text" name="des" id="des" placeholder="Descripcion">
-                <label for="">Cantidad:</label>
-                <input type="text" name="cant" id="cant" placeholder="Descripcion">
             </fieldset>
             <!-- inicio editorial -->
             <label for="">Editorial:</label>
@@ -60,12 +58,12 @@
                 <!-- inicio autor -->
                 <select name="ida" id="ida">
                     <?php
-                    $con_sql='SELECT * FROM autor';
+                    $con_sql="SELECT * FROM usuarios WHERE rolUsuario='autor'";
                     $res=mysqli_query($db,$con_sql);
                     while($reg=$res->fetch_assoc())
                     {
                     ?>
-                    <option value="<?php echo $reg['idautor']; ?>">
+                    <option value="<?php echo $reg['idusuario']; ?>">
                         <?php echo $reg['nombre']." ".$reg['paterno']; ?>
                     </option>
                     <?php 

@@ -1,4 +1,10 @@
 <?php
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    $auth = $_SESSION['login'] ?? false;
+    $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : null;
+    $cod = $_SESSION['idUsuario']? $_SESSION['idUsuario']: null;
     require '../../includes/config/database.php';
     $db=conectarDB();
     //var_dump($db);
@@ -20,6 +26,7 @@
             echo "
                 <script> 
                     alert ('Se registro');
+                    window.location='/espaciodeliteratura/admin/perfilAutor?cod=$cod';
                 </script>
             ";
         }

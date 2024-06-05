@@ -31,7 +31,6 @@
                 ?>
                 <tr>
 
-                        <td><?php echo $var['cantidad']; ?> </td>
                         <td><?php echo $var['fechacompra']; ?> </td>
                         <td><?php echo $var['nickname']; ?> </td>
                         <?php
