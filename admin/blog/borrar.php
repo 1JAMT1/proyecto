@@ -1,4 +1,11 @@
 <?php
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
     if(!isset($_SESSION)){
         session_start();
     }

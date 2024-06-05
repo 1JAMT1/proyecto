@@ -1,4 +1,11 @@
 <?php
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridads
     if(empty($_POST["oculto"]) || empty($_POST["nombre_completo"]) || empty($_POST["correo"]) || empty($_POST["telefono"]) || empty($_POST["direccion"]) || empty($_POST["fecha_nacimiento"]) || empty($_POST["contrasena"]) || empty($_POST["puntos_acumulados"]) || empty($_POST["genero"])){
         header('Location: index.php?mensaje=falta');
         exit();

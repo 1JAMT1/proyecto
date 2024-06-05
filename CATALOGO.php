@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
 	session_start();
 }
-$id=$_SESSION['idUsuario'];
+$id = isset($_SESSION['idUsuario']) ? $_SESSION['idUsuario'] : null;
     include "../espaciodeliteratura/includes/templates/header.php";
 	require '../espaciodeliteratura/includes/config/database.php';
     $db=conectarDB();
