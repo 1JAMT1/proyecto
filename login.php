@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['login'] = true;
                 $_SESSION['rol'] =$usuario['rolUsuario'];
                 $_SESSION['pass']=$usuario['password'];
+                $_SESSION['saldo']=$usuario['saldo'];
                 
                 if ($usuario['rolUsuario'] == 'admin') {
                     header("Location: /espaciodeliteratura/BASEDEDATOS.php");

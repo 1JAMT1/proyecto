@@ -19,9 +19,10 @@ if(!$auth){
         $a=$_FILES['ima']['name'];
         $b=$_POST['num'];
         $io=$_POST['rol'];
+        $saldo=0;
         $pashash=password_hash($p,PASSWORD_DEFAULT);
-        $con_sql="INSERT INTO usuarios (nickname,gmail,password,imagenUsuario,telefono,rolUsuario,nombre,paterno,materno) 
-        VALUES ('$nick','$g','$pashash','$a','$b','$io','$nom','$pat','$mat')";
+        $con_sql="INSERT INTO usuarios (nickname,gmail,password,imagenUsuario,telefono,rolUsuario,nombre,paterno,materno,saldo) 
+        VALUES ('$nick','$g','$pashash','$a','$b','$io','$nom','$pat','$mat','$saldo')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             $tmp=$_FILES['ima']['tmp_name'];
