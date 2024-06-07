@@ -353,7 +353,7 @@
 						</div>
 						<div class="content-blog">
 							<h3><?php echo $reg['titulo']; ?></h3>
-							<span>31 octubre 2023</span>
+							<span><?php echo $reg['fechablog']; ?></span>
 							<p>
 								<?php echo $reg['contenido']; ?>
 							</p>

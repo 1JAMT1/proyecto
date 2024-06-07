@@ -151,6 +151,7 @@ incluirTemplate('header');
                 <img src="../blog/imagenes/<?php echo htmlspecialchars($jamt_blog['imagen']); ?>" alt="Imagen del blog">
                 <div class="jamt-blog-content">
                     <h3>Título: <?php echo htmlspecialchars($jamt_blog['titulo']); ?></h3>
+                    <h3>Fecha: <?php echo htmlspecialchars($jamt_blog['fechablog']); ?></h3>
                     <p><?php echo nl2br(htmlspecialchars($jamt_blog['contenido'])); ?></p>
                 </div>
                 <div class="jamt-actions">

@@ -93,7 +93,14 @@ if ($jamt_res) {
                 <h3>Título: <?php echo htmlspecialchars($jamt_libro['titulo']); ?></h3>
                 <h3>Fecha: <?php echo htmlspecialchars($jamt_libro['fechacreacion']); ?></h3>
                 <h3>Descripcion: <?php echo htmlspecialchars($jamt_libro['descripcion']); ?></h3>
-                <h3>Genero: <?php echo htmlspecialchars($jamt_libro['generoLibro']); ?></h3>
+                <?php
+                $codGenero=$jamt_libro['generoLibro'];
+                $sql="SELECT *FROM generolibros WHERE idGenero='$codGenero'";
+                $res4=mysqli_query($jamt_db,$sql);
+                $gen=mysqli_fetch_array($res4);
+                $r=$gen['nombreGenero'];
+                ?>
+                <h3>Genero: <?php echo htmlspecialchars($r); ?></h3>
                 <img class="jamt-image" src="../libros/imagenes/<?php echo htmlspecialchars($jamt_libro['portada']); ?>" alt="Portada del libro">
             </div>
         <?php

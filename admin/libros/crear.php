@@ -28,7 +28,21 @@ if(!$auth){
                 <label for="">Fecha de Creación:</label>
                 <input type="date" name="fec" id="fec" placeholder="Fechacreacion">
                 <label for="">Género:</label>
-                <input type="text" name="gen" id="gen" placeholder="Genero">
+                        <label for="form-label">Genero: </label>
+                        <select name="gen" id="gen">
+                        <?php
+                            $con_sql='SELECT * FROM generolibros';
+                            $res=mysqli_query($db,$con_sql);
+                            while($reg=$res->fetch_assoc())
+                            {
+                            ?>
+                            <option value="<?php echo $reg['idGenero']; ?>">
+                                <?php echo $reg['nombreGenero']; ?>
+                            </option>
+                        <?php 
+                            } 
+                        ?>
+                        </select>
                 <!-- inicio de portada -->
                     <label for="">Portada:</label>
                     <input type="file" name="por" id="por" accept="image/jpeg, image/png, image/jpg">

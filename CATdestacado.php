@@ -11,7 +11,7 @@
     <main class="contenedor seccion">
         <br><br>
         <link rel="stylesheet" href="../../css/dropdown.css">
-<style>
+		<style>
 .dropdown-content {
   display: none;
   position: absolute;
@@ -50,18 +50,69 @@
   </div>
 </div>
 
-        <div class="container-products">
+<h1 class="heading-1">Libros góticos</h1>
+<div class="container-products">
 
                 <?php
-                   $consql = "SELECT p.* FROM libros AS p WHERE p.precio < 16";
-                   $resultado=mysqli_query($db,$consql);
+                    $x=1;
+                    $consql = "SELECT * FROM libros where generoLibro='Gótico' ORDER BY RAND()";
+                    $resultado=mysqli_query($db,$consql);
                     while($var=mysqli_fetch_array($resultado))
                     {
                 ?>
 
 <div class="card-product">
 						<div class="container-img">
-                        <img src="/espaciodeliteratura/admin/libros/imagenes/<?php echo $var['portada']; ?>" alt="Cafe Irish" />
+							<img src="/espaciodeliteratura/admin/libros/imagenes/<?php echo $var['portada']; ?>" alt="Cafe Irish" />
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+                        <div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3><?php echo $var['titulo']; ?></h3>
+              <span class="add-cart">
+			<a href="/espaciodeliteratura/admin/pedido/registrarpedido1.php?idu=<?php echo $id;?>&
+			idl=<?php echo $var['idlibro']; ?>"><i class="fa-solid fa-basket-shopping"></i></a>
+			</span>
+							<p class="price"><?php echo $var['precio']; ?></p>
+						</div>
+					</div>
+                <?php
+                    $x = $x+1;
+                    }
+                ?>
+</div>
+        <br><br>
+
+        <h1 class="heading-1">Libros de ficcion</h1>
+<div class="container-products">
+
+<?php
+                    $x=1;
+                    $consql = "SELECT * FROM libros where generoLibro='Ficción' ORDER BY RAND()";
+                    $resultado=mysqli_query($db,$consql);
+                    while($var=mysqli_fetch_array($resultado)) //&& $x<=3
+                    {
+                ?>
+
+<div class="card-product">
+						<div class="container-img">
+							<img src="/espaciodeliteratura/admin/libros/imagenes/<?php echo $var['portada']; ?>" alt="Cafe Irish" />
 							<div class="button-group">
 								<span>
 									<i class="fa-regular fa-eye"></i>
@@ -81,7 +132,7 @@
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-solid fa-star"></i>
 								<i class="fa-regular fa-star"></i>
-							</div>
+                                </div>
 							<h3><?php echo $var['titulo']; ?></h3>
               <span class="add-cart">
 			<a href="/espaciodeliteratura/admin/pedido/registrarpedido1.php?idu=<?php echo $id;?>&
@@ -91,6 +142,7 @@
 						</div>
 					</div>
                 <?php
+                    $x = $x+1;
                     }
                 ?>
 </div>
@@ -99,4 +151,3 @@
     <script src="../../jsa/bootstrap.min.js" ></script>
 <?php
     incluirTemplate('footer');
-?>

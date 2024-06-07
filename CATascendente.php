@@ -41,7 +41,7 @@
 <div class="dropdown">
   <button class="btn btn-primary">Filtre por</button>
   <div class="dropdown-content">
-    <a href="../espaciodeliteratura/CATALOGO.php">Más destacados</a>
+    <a href="../espaciodeliteratura/CATdestacado.php">Más destacados</a>
     <a href="../espaciodeliteratura/CATascendente.php">Ascendente</a>
     <a href="../espaciodeliteratura/CATdescendente.php">Descendente</a>
     <a href="../espaciodeliteratura/CATbarato.php">Más baratos</a>

@@ -14,8 +14,10 @@ if(!$auth){
         $t=$_POST['tit'];
         $c=$_POST['con'];
         $i=$_FILES['ima']['name'];
-        $con_sql="INSERT INTO blog (idusuario,titulo,contenido,imagen) 
-        VALUES ('$u','$t','$c','$i')";
+        $fechaHoraActual = new DateTime();
+        $fecha_actual = $fechaHoraActual->format("Y-m-d");
+        $con_sql="INSERT INTO blog (idusuario,titulo,contenido,imagen,fechablog) 
+        VALUES ('$u','$t','$c','$i','$fecha_actual')";
         $res=mysqli_query($db,$con_sql);
         if($res){
             $tmp=$_FILES['ima']['tmp_name'];
