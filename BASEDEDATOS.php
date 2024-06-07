@@ -21,6 +21,7 @@ if(!$auth){
         <a href="../espaciodeliteratura/admin/pedido/listado.php" class="btn btn-dark">Pedidos</a>
         <a href="../espaciodeliteratura/admin/blog/listado.php" class="btn btn-warning">Blogs</a>
         <a href="../espaciodeliteratura/admin/editoriales/listado.php" class="btn btn-primary">Editoriales</a>
+        <a href="../espaciodeliteratura/admin/generoLibro/listado.php" class="btn btn-danger">Genero de Libros</a>
         </center>
         <br><br>
     </main>
