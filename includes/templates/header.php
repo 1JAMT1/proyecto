@@ -46,7 +46,7 @@
 							<i class="fa-solid fa-user"></i>
 						</a>
 					<?php elseif ($rol == 'admin'): ?>
-					<a href="/espaciodeliteratura/BASEDEDATOS.php">
+						<a href="/espaciodeliteratura/BASEDEDATOS.php">
 						<i class="fa-solid fa-user"></i>
 					</a>
 					<?php endif; ?>

@@ -46,9 +46,7 @@ if(!$auth){
 
                         <!-- fin de imagen -->
                         <td><?php echo $var['telefono']; ?> </td>
-                        <!-- inicio pruba -->
-                        <!-- fin prueba --->
-                        <?php ?>
+                        <td><a href="/espaciodeliteratura/admin/PerfilUsuario/index.php?cod=<?php echo $var['idusuario'];?>" class="btn btn-success">Tu perfil</a></td>
                         <td><a href="borrar.php?cod=<?php echo $var['idusuario']; ?>"class="btn btn-danger">Eliminar</a></td>
                         <td><a href="actualizar.php?cod=<?php echo $var['idusuario']; ?>"class="btn btn-info">Actualizar</a></td>
                 </tr>

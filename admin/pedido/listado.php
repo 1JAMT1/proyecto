@@ -16,6 +16,21 @@ if(!$auth){
     <main class="contenedor seccion">
         <br>
         <a href="/espaciodeliteratura/admin/pedido/crear.php" class="btn btn-success">Nuevo Pedido</a>
+        <label for="">Buscar por fecha : </label>
+        <input type="date" id="fecha1">
+        <a href="/espaciodeliteratura/admin/pedido/buscar.php" class="btn btn-primary">Buscar</a>
+        <label for="">Buscar por titulo : </label>
+        <input type="text" id="titulo1">
+    <a href="/espaciodeliteratura/admin/pedido/buscar.php" id="buscarBtn" class="btn btn-primary">Buscar</a>
+
+    <script>
+        document.getElementById('buscarBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            var titulo1Value = document.getElementById('titulo1').value;
+            var newHref = '/espaciodeliteratura/admin/pedido/buscar.php?titulo=' + encodeURIComponent(titulo1Value);
+            window.location.href = newHref; // Navigate to the new URL
+        });
+    </script>
         <br><br>
         <h1> Listado de Pedidos </h1>
         <h3>
