@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 require 'includes/funciones.php';
 incluirTemplate('header');
 ?>
+<link href="ojo.css" type="text/css" rel="stylesheet">
 <main class="contenedor seccion contenido-centrado">
     <br><br>
     <center>
@@ -128,6 +129,7 @@ incluirTemplate('header');
         <input type="email" name="ema" id="ema" value="" placeholder="Tu email">
         <label for="pas">Password</label>
         <input type="password" name="pas" id="pas" value="" placeholder="Tu password">
+        <img src="cerrar-ojo.png" onclick="mostrar()" class="pass-icon" id="pass-icon">
         <!--<input type="button" name="wf" onclick="mostrar()" value="Mostrar Contraseña">-->
     </fieldset>
     <center>
@@ -143,17 +145,20 @@ incluirTemplate('header');
 
 </main>
 <br><br>
-<!--<script type="text/javascript">
+<script type="text/javascript">
     function mostrar() {
         var tipo = document.getElementById("pas");
 
         if(tipo.type == 'password'){
             tipo.type = 'text';
+            document.getElementById('pass-icon').src='ojo.png';
+            src="ojo.png";
         } else {
             tipo.type = 'password';
+            document.getElementById('pass-icon').src='cerrar-ojo.png';
         }
     }
-</script>-->
+</script>
 <?php
 incluirTemplate('footer');
 ?>

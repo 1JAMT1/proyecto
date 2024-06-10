@@ -1,0 +1,12 @@
+.pass-icon{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 1000px;
+    top: 360px;
+    right: 10px;
+    width: 24px;
+    cursor: pointer;
+}
