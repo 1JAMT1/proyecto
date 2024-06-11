@@ -16,7 +16,6 @@ if(!$auth){
         <br>
         <h1>Crear Blog</h1>
         <br>
-        <br><br>
 <!-- inicio -->
 <div class="col-md-4">
 <div class="card">
@@ -45,6 +44,8 @@ if(!$auth){
                 </form>
             </div>
         </div>
+        <a href="/espaciodeliteratura/admin/perfilUsuario/index.php" class="btn btn-warning">Volver</a>
+        <br><br>
 <!-- fin -->
     </main>
     <script src="../../jsa/bootstrap.min.js" ></script>

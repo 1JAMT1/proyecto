@@ -16,60 +16,60 @@
         <form action="">
             <div class="row">
                 <div class="col">
-                    <h3 class="title">billing address</h3>
+                    <h3 class="title">Dirección de Facturación</h3>
 
                     <div class="inputBox">
-                        <span>full name :</span>
+                        <span>Nombre Completo :</span>
                         <input type="text" placeholder="john deo">
                     </div>
                     <div class="inputBox">
-                        <span>email :</span>
+                        <span>Email :</span>
                         <input type="email" placeholder="example@example.come">
                     </div>
                     <div class="inputBox">
-                        <span>address :</span>
+                        <span>Dirección :</span>
                         <input type="text" placeholder="room - street - locality">
                     </div>
                     <div class="inputBox">
-                        <span>city :</span>
+                        <span>Ciudad :</span>
                         <input type="text" placeholder="mumbai">
                     </div>
 
                     <div class="flex">
                         <div class="inputBox">
-                            <span>state :</span>
+                            <span>Estado :</span>
                             <input type="text" placeholder="india">
                         </div>
                         <div class="inputBox">
-                            <span>zip code :</span>
+                            <span>Código Postal :</span>
                             <input type="text" placeholder="123 456">
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <h3 class="title">payment</h3>
+                    <h3 class="title">Pago</h3>
 
                     <div class="inputBox">
-                        <span>cards accepted :</span>
+                        <span>Tarjetas Aceptadas :</span>
                         <img src="/espaciodeliteratura/img/payment.png" alt="">
                     </div>
                     <div class="inputBox">
-                        <span>name on card :</span>
-                        <input type="text" placeholder="mr. john deo">
+                        <span>Recargar Saldo :</span>
+                        <input type="decimal" placeholder="mr. john deo">
                     </div>
                     <div class="inputBox">
-                        <span>credit card number :</span>
+                        <span>Número de Tarjeta de Crédito :</span>
                         <input type="number" placeholder="1111-2222-3333-4444">
                     </div>
                     <div class="inputBox">
-                        <span>exp month :</span>
+                        <span>Mes de Vencimiento :</span>
                         <input type="text" placeholder="january">
                     </div>
 
                     <div class="flex">
                         <div class="inputBox">
-                            <span>exp year :</span>
+                            <span>Año de Vencimiento :</span>
                             <input type="text" placeholder="2022">
                         </div>
                         <div class="inputBox">
