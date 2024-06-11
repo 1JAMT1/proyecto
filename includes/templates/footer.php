@@ -19,12 +19,12 @@
                 <i class="btn__icon fa-solid"></i>
             </div>
         </div>
-    </div>
+    </div>-->
 	<div class="go-top-container">
 		<div class="go-top-button">
 			<i class="fas fa-chevron-up"></i>
 		</div>
-	</div>-->
+	</div>
     <footer class="footer">
 			<div class="container container-footer">
 				<div class="menu-footer">
@@ -102,7 +102,7 @@
 					<img src="/espaciodeliteratura/img/payment.png" onclick="openPopup9()">
 				</div>
 			</div>
-			<script src="/espaciodeliteratura/js/gotop.js"></script>
+			<script src="/../espaciodeliteratura/js/gotop.js"></script>
 			<script>
         		function openPopup1() {
         		var url = 'suscribete.php'
