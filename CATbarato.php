@@ -53,7 +53,7 @@
         <div class="container-products">
 
                 <?php
-                   $consql = "SELECT p.* FROM libros AS p WHERE p.precio < 16";
+                   $consql = "SELECT p.* FROM libros AS p WHERE p.precio < 40";
                    $resultado=mysqli_query($db,$consql);
                     while($var=mysqli_fetch_array($resultado))
                     {
