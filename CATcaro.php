@@ -54,7 +54,7 @@
 
                 <?php
                     //SELECT * FROM libros ORDER BY titulo ASC
-                    $consql = "SELECT p.* FROM libros AS p WHERE p.precio > 15";
+                    $consql = "SELECT p.* FROM libros AS p WHERE p.precio > 40";
                     $resultado=mysqli_query($db,$consql);
                     while($var=mysqli_fetch_array($resultado))
                     {
