@@ -1,4 +1,11 @@
 <?php 
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
     require '../../includes/config/database.php';
     $db=conectarDB();
     require '../../includes/funciones.php';

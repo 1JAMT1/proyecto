@@ -1,4 +1,11 @@
 <?php 
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
     require '../../includes/config/database.php';
     $db=conectarDB();
     require '../../includes/funciones.php';
@@ -7,7 +14,6 @@
     if(isset($_POST['Modificar']))
     {
         $text1=$_POST['tit'];
-        $int=$_POST['ida'];
         $date=$_POST['fec'];
         $text2=$_POST['gen'];
         $varchar1=$_POST['por'];
@@ -15,7 +21,7 @@
         $varchar2=$_POST['est'];
         $text3=$_POST['des'];
         $varchar3=$_POST['edi'];
-        $con_sql="UPDATE libros SET titulo='$text1', idautor='$int', fechacreacion='$date', genero='$text2', portada='$varchar1', precio='$decimal', estado='$varchar2', descripcion='$text3', editorial='$varchar3' WHERE idlibro='$cod'";
+        $con_sql="UPDATE libros SET titulo='$text1', fechacreacion='$date', generoLibro='$text2', portada='$varchar1', precio='$decimal', estado='$varchar2', descripcion='$text3', editorial='$varchar3' WHERE idlibro='$cod'";
         $resm=mysqli_query($db,$con_sql);
         if($resm){
             echo "
@@ -45,10 +51,6 @@
             <tr>
                 <td>Título</td>
                 <td><input type="text" class="form-control" name="tit" id="tit" value="<?php echo $fila['titulo']; ?> "></td>
-            </tr>
-            <tr>
-                <td>IdAutor</td>
-                <td><input type="int" class="form-control" name="ida" id="ida" value="<?php echo $fila['idautor']; ?> "></td>
             </tr>
             <tr>
                 <td>Fecha de Creación</td>

@@ -1,4 +1,11 @@
 <?php
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
     require '../../includes/config/database.php';
     $db=conectarDB();
     require '../../includes/funciones.php';
@@ -29,7 +36,20 @@
                     </div>
                     <div class="mb-3">
                         <label for="form-label">Genero: </label>
-                        <input type="text" class="form-control" name="gen" id="gen" placeholder="Genero" autofocus required>
+                        <select name="gen" id="gen">
+                        <?php
+                            $con_sql='SELECT * FROM generolibros';
+                            $res=mysqli_query($db,$con_sql);
+                            while($reg=$res->fetch_assoc())
+                            {
+                            ?>
+                            <option value="<?php echo $reg['idGenero']; ?>">
+                                <?php echo $reg['nombreGenero']; ?>
+                            </option>
+                        <?php 
+                            } 
+                        ?>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="form-label">Descripcion: </label>
@@ -58,7 +78,7 @@
                         <?php 
                             } 
                         ?>
-                </select>
+                        </select>
                     </div>
                     <br>
                     <div class="d-grid">

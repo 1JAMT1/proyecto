@@ -1,4 +1,11 @@
 <?php 
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
     require '../../includes/config/database.php';
     $db=conectarDB();
     require '../../includes/funciones.php';
@@ -8,9 +15,8 @@
     {
         $int1=$_POST['idu'];
         $int2=$_POST['idl'];
-        $int3=$_POST['can'];
         $date=$_POST['fec'];
-        $con_sql="UPDATE pedido SET idusuario='$int1', idlibro='$int2', cantidad='$int3', fechacompra='$date' WHERE idpedido='$cod'";
+        $con_sql="UPDATE pedido SET idusuario='$int1', idlibro='$int2', fechacompra='$date' WHERE idpedido='$cod'";
         $resm=mysqli_query($db,$con_sql);
         if($resm){
             echo "
@@ -44,10 +50,6 @@
             <tr>
                 <td>IdLibro</td>
                 <td><input type="int" class="form-control" name="idl" id="idl" value="<?php echo $fila['idlibro']; ?> "></td>
-            </tr>
-            <tr>
-                <td>Cantidad</td>
-                <td><input type="int" class="form-control" name="can" id="can" value="<?php echo $fila['cantidad']; ?> "></td>
             </tr>
             <tr>
                 <td>Fecha de Compra</td>

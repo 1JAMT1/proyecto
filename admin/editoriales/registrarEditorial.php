@@ -1,4 +1,11 @@
 <?php
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridads
     require '../../includes/config/database.php';
     $db=conectarDB();
     //var_dump($db);
@@ -11,6 +18,7 @@
             echo "
                 <script> 
                     alert ('Se registro');
+                    window.location.href = '/espaciodeliteratura/admin/editoriales/listado.php';
                 </script>
             ";
         }

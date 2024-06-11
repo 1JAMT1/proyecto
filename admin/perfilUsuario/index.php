@@ -1,8 +1,15 @@
 <?php
-    require '../../includes/config/database.php';
-    $jamt_db = conectarDB();
-    require '../../includes/funciones.php';
-    incluirTemplate('header');
+//inicio seguridad
+session_start();
+$auth = $_SESSION['login'];
+if (!$auth) {
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
+require '../../includes/config/database.php';
+$jamt_db = conectarDB();
+require '../../includes/funciones.php';
+incluirTemplate('header');
 ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
@@ -65,6 +72,22 @@
     .jamt-blog-content {
         margin-top: 10px;
     }
+    .jamt-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+    }
+    .jamt-saldo {
+        display: inline-block;
+        width: 60px;
+        margin-left: 10px;
+        text-align: center;
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 0.375rem 0.75rem;
+    }
 </style>
 
 <div class="jamt-container">
@@ -80,12 +103,18 @@
     ?>
     <div class="jamt-profile">
         <img src="../usuarios/imagenes/<?php echo htmlspecialchars($jamt_usuario['imagenUsuario']); ?>" alt="Imagen de perfil">
-        <h2>Bienvenido  <?php echo htmlspecialchars($jamt_usuario['nickname']); ?>
-        <?php $cod=$jamt_cod; ?>
-        <a href="/espaciodeliteratura/admin/perfilUsuario/blog.php?cod=<?php echo $cod;?>" class="btn btn-success">Publicar blog</a>
-        <a href="/espaciodeliteratura/admin/usuarios/actualizar.php?cod=<?php echo $cod;?>" class="btn btn-primary">Actualizar perfil</a>
-
-    </h2>
+        <div>
+            <h2>Bienvenido  <?php echo htmlspecialchars($jamt_usuario['nickname']); ?></h2>
+            <div class="jamt-actions">
+                <a href="/espaciodeliteratura/admin/perfilUsuario/blog.php?cod=<?php echo $jamt_cod;?>" class="btn btn-success">Publicar blog</a>
+                <a href="/espaciodeliteratura/admin/usuarios/actualizar.php?cod=<?php echo $jamt_cod;?>" class="btn btn-primary">Actualizar perfil</a>
+                
+                <!-- Displaying the user's balance -->
+            <h2>Saldo :</h2>
+                <span class="jamt-saldo"><?php echo htmlspecialchars($jamt_usuario['saldo']); ?></span>
+                <a href="/espaciodeliteratura/admin/perfilUsuario/aumentarSaldo.php?cod=<?php echo $jamt_cod;?>" class="btn btn-success">Recargar</a>
+            </div>
+        </div>
     </div>
 
     <h2 class="jamt-header">Tus pedidos son:</h2>
@@ -122,9 +151,12 @@
                 <img src="../blog/imagenes/<?php echo htmlspecialchars($jamt_blog['imagen']); ?>" alt="Imagen del blog">
                 <div class="jamt-blog-content">
                     <h3>Título: <?php echo htmlspecialchars($jamt_blog['titulo']); ?></h3>
+                    <h3>Fecha: <?php echo htmlspecialchars($jamt_blog['fechablog']); ?></h3>
                     <p><?php echo nl2br(htmlspecialchars($jamt_blog['contenido'])); ?></p>
                 </div>
-                <a href="/espaciodeliteratura/admin/blog/borrar.php?cod=<?php echo $jamt_blog['idblog']; ?>"class="btn btn-danger">Eliminar</a>
+                <div class="jamt-actions">
+                    <a href="/espaciodeliteratura/admin/blog/borrar.php?cod=<?php echo $jamt_blog['idblog']; ?>" class="btn btn-danger">Eliminar</a>
+                </div>
             </div>
         <?php
         }
@@ -136,7 +168,5 @@
 <?php
 incluirTemplate('footer');
 ?>
-<script
-	src="https://kit.fontawesome.com/81581fb069.js"
-></script>
+<script src="https://kit.fontawesome.com/81581fb069.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -1,9 +1,21 @@
-<?php 
+<?php
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
+    if (!isset($_SESSION)) {
+        session_start();
+    }
+    $auth = $_SESSION['login'] ?? false;
+    $rol = isset($_SESSION['rol']) ? $_SESSION['rol'] : null;
+    $cod = $_SESSION['idUsuario']? $_SESSION['idUsuario']: null;
     require '../../includes/config/database.php';
     $db=conectarDB();
     require '../../includes/funciones.php';
     incluirTemplate('header');
-    $cod=$_GET['cod'];
     if(isset($_POST['Modificar']))
     {
         $var=$_POST['gma'];
@@ -17,12 +29,31 @@
         telefono='$tel', nickname='$nick' WHERE idusuario='$cod'";
         $resm=mysqli_query($db,$con_sql);
         if($resm){
-            echo "
-            <script>
-                window.alert('registro modificado con exito');
-                window.location='/espaciodeliteratura/index.php';
-            </script>
-            ";
+            if($rol=='usuario'){
+                echo "
+                <script>
+                    window.alert('registro modificado con exito');
+                    window.location='/espaciodeliteratura/admin/perfilUsuario?cod=$cod';
+                </script>
+                ";
+            }
+            if($rol=='autor'){
+                echo "
+                <script>
+                    window.alert('registro modificado con exito');
+                    window.location='/espaciodeliteratura/admin/perfilAutor?cod=$cod';
+                </script>
+                ";
+            }
+            if($rol=='admin'){
+                echo "
+                <script>
+                    window.alert('registro modificado con exito');
+                    window.location='/espaciodeliteratura/BASEDEDATOS.php';
+                </script>
+                ";
+            }
+
         }
     }
 ?>

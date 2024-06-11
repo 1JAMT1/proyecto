@@ -1,4 +1,11 @@
 <?php
+//inicio seguridad
+session_start();
+$auth=$_SESSION['login'];
+if(!$auth){
+    header('Location:/espaciodeliteratura');
+}
+//fin de seguridad
     require '../../includes/config/database.php';
     $db=conectarDB();
     //var_dump($db);
@@ -49,7 +56,7 @@
             </tbody>
         </table>
         </h3>
-        <a href="/espaciodeliteratura/login.php" class="btn btn-warning">Volver</a>
+        <a href="/espaciodeliteratura/BASEDEDATOS.php" class="btn btn-warning">Volver</a>
         <br><br>
     </main>
     <script src="../../jsa/bootstrap.min.js" ></script>

@@ -2,7 +2,7 @@
 if(!isset($_SESSION)){
 	session_start();
 }
-$id=$_SESSION['idUsuario'];
+$id = isset($_SESSION['idUsuario']) ? $_SESSION['idUsuario'] : null;
     include "../espaciodeliteratura/includes/templates/header.php";
 	require '../espaciodeliteratura/includes/config/database.php';
     $db=conectarDB();
@@ -48,7 +48,7 @@ $id=$_SESSION['idUsuario'];
 <div class="dropdown">
   <button class="btn btn-primary">Filtre por</button>
   <div class="dropdown-content">
-    <a href="../espaciodeliteratura/CATALOGO.php">Más destacados</a>
+    <a href="../espaciodeliteratura/CATdestacado.php">Más destacados</a>
     <a href="../espaciodeliteratura/CATascendente.php">Ascendente</a>
     <a href="../espaciodeliteratura/CATdescendente.php">Descendente</a>
     <a href="../espaciodeliteratura/CATbarato.php">Más baratos</a>
