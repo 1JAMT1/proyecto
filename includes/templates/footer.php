@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Copatible" content="IE-edge">
     <title>Document</title>
 	<link rel="stylesheet" href="/../espaciodeliteratura/css/gotop.css">
 	<link rel="stylesheet" href="/../espaciodeliteratura/styles.css">
 	<link rel="stylesheet" href="/../estilos.css">
+	<link rel="stylesheet" href="/../solluna.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+	<!--
+	<div class="btn">
+        <div class="btn__indicator">
+            <div class="btn__icon-container">
+                <i class="btn__icon fa-solid"></i>
+            </div>
+        </div>
+    </div>
 	<div class="go-top-container">
 		<div class="go-top-button">
 			<i class="fas fa-chevron-up"></i>
 		</div>
-	</div>
+	</div>-->
     <footer class="footer">
 			<div class="container container-footer">
 				<div class="menu-footer">
@@ -109,6 +120,7 @@
 			<script
 			src="https://kit.fontawesome.com/81581fb069.js"
 			></script>
+			<script src="/../solluna.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 	</footer>
